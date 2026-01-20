@@ -1,4 +1,4 @@
-#ifndef __UICONTAINER_H__
+ï»¿#ifndef __UICONTAINER_H__
 #define __UICONTAINER_H__
 
 #pragma once
@@ -55,7 +55,7 @@ namespace DuiLib {
 		void SetMouseEnabled(bool bEnable = true);
 
 		virtual RECT GetInset() const;
-		virtual void SetInset(RECT rcInset); // ÉèÖÃÄÚ±ß¾à£¬Ïàµ±ÓÚÉèÖÃ¿Í»§Çø
+		virtual void SetInset(RECT rcInset); // ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ß¾à£¬ï¿½àµ±ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Í»ï¿½ï¿½ï¿½
 		virtual int GetChildPadding() const;
 		virtual void SetChildPadding(int iPadding);
 		virtual UINT GetChildAlign() const;

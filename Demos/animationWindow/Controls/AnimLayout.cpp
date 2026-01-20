@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "AnimLayout.h"
 #include "../UiFeatureEffect/Interface/IUIEffect.h"
 
@@ -85,16 +85,16 @@ bool AnimLayout::StartEffect()
 	GetObject(m_hTransBitmap, sizeof(bmDst), &bmDst);
 	SIZE szMemDc = { bmDst.bmWidth, bmDst.bmHeight };
 
-	//ÐÞ²¹Ò»ÏÂAlphaÍ¨µÀ,Ò»Ð©¿Ø¼þ(Richedit)»áÈÃAlphaÎª0
+	//ï¿½Þ²ï¿½Ò»ï¿½ï¿½AlphaÍ¨ï¿½ï¿½,Ò»Ð©ï¿½Ø¼ï¿½(Richedit)ï¿½ï¿½ï¿½ï¿½AlphaÎª0
 	RECT rcRestore = m_rcItem;
 	RestoreAlphaColor((LPBYTE)bmDst.bmBits, bmDst.bmWidth, &rcRestore);
 
-	// Ìî³ä¶¯»­²ÎÊý
+	// ï¿½ï¿½ä¶¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	AnimationParam animParam;
-	animParam.effectKey = (WPARAM)this;				//¿Ø¼þÖ¸Õë
-	animParam.animationEffect = m_dwEffectNum++;	//¶¯»­ÀàÐÍ£¬´Ó2-80£¬1Îª×Ô¶¨Òå¶¯»­£¬²¢Ã»ÓÐÒÆÖ²¹ýÀ´
-	animParam.animationFrequency = 20;				//¶¯»­¼ä¸ô
-	animParam.bShow = TRUE;							//¶¯»­Ë³Ðò
+	animParam.effectKey = (WPARAM)this;				//ï¿½Ø¼ï¿½Ö¸ï¿½ï¿½
+	animParam.animationEffect = m_dwEffectNum++;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½2-80ï¿½ï¿½1Îªï¿½Ô¶ï¿½ï¿½å¶¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½
+	animParam.animationFrequency = 20;				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	animParam.bShow = TRUE;							//ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½
 	animParam.hBitmap = m_hTransBitmap;
 	animParam.pBmpData = (BYTE*)bmDst.bmBits;
 	animParam.bmpSize = szMemDc;
@@ -105,11 +105,11 @@ bool AnimLayout::StartEffect()
 
 	m_bPlaying = true;
 
-	// ÕâÀïÊÇÍ¬²½Ö´ÐÐµÄ£¬Animationº¯ÊýÔÚ¶¯»­Íê±Ïºó·µ»Ø
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Ö´ï¿½ÐµÄ£ï¿½Animationï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ïºó·µ»ï¿½
 	bRet = m_pEffect->Animation(dynamic_cast<IUIEffectCallBack*>(this), 0);
 	ASSERT(bRet);
 
-	// µÝ¹éÑÝÊ¾ËùÓÐ¶¯»­Ð§¹û,ÕâÖ»ÊÇÎªÁËÑÝÊ¾Ð§¹û,Êµ¼Ê¿ª·¢²»ÒªÕâÑù×ö!
+	// ï¿½Ý¹ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½Ð§ï¿½ï¿½,ï¿½ï¿½Ö»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê¾Ð§ï¿½ï¿½,Êµï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!
 	StartEffect();
 
 	return true;
@@ -145,6 +145,6 @@ void AnimLayout::OnUiEffectEnd(WPARAM effectKey, DWORD animaType)
 
 void AnimLayout::OnUiEffectDraw()
 {
-	// ÕâÀï±ØÐëÇ¿ÖÆÖØ»æ´°Ìå£¬·ñÔòÎÞ·¨ÏÔÊ¾³ö¶¯»­£¬ºÜ¹Ø¼ü
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½Ø»æ´°ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹Ø¼ï¿½
 	RedrawWindow(m_pManager->GetPaintWindow(), NULL, NULL,  RDW_INVALIDATE | RDW_UPDATENOW);
 }

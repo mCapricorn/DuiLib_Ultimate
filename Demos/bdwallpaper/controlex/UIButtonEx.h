@@ -1,4 +1,4 @@
-#ifndef __BUTTONEX_H__
+ï»¿#ifndef __BUTTONEX_H__
 #define __BUTTONEX_H__
 
 #include <ShlObj.h>
@@ -21,15 +21,15 @@ namespace DuiLib
 	public:
 		virtual void PaintStatusImage(HDC hDC)
 		{
-			// ¿Ø¼þÎ»ÖÃ
+			// ï¿½Ø¼ï¿½Î»ï¿½ï¿½
 			RECT rcItem = m_rcItem;
-			// »æÖÆ±ÚÖ½Í¼Æ¬
+			// ï¿½ï¿½ï¿½Æ±ï¿½Ö½Í¼Æ¬
 			CRenderEngine::DrawImageString(hDC, m_pManager, rcItem, m_rcPaint, PrepareImage(), NULL);
-			// »æÖÆ×´Ì¬
+			// ï¿½ï¿½ï¿½ï¿½×´Ì¬
 			CButtonUI::PaintStatusImage(hDC);
 			if(m_uButtonState & UISTATE_HOT)
 			{
-				// ¹¤¾ßÀ¸Î»ÖÃ
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 				RECT rcToolBar = rcItem;
 				RECT rcFav = rcItem;
 				RECT rcSet = rcItem;
@@ -38,7 +38,7 @@ namespace DuiLib
 				rcFav.right = rcFav.left + 94;
 				rcSet.top = rcSet.bottom - 25;
 				rcSet.left = rcSet.right - 94;
-				// ¹¤¾ßÀ¸»æÖÆ
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				CRenderEngine::DrawImageString(hDC, m_pManager, rcToolBar, m_rcPaint, m_sWPToolbarImage, NULL);
 				CRenderEngine::DrawImageString(hDC, m_pManager, rcFav, m_rcPaint, m_sWPFavImage, NULL);
 				CRenderEngine::DrawImageString(hDC, m_pManager, rcSet, m_rcPaint, m_sWPSetImage, NULL);
@@ -50,7 +50,7 @@ namespace DuiLib
 			if( event.Type == UIEVENT_BUTTONUP )
 			{
 				if( (m_uButtonState & UISTATE_CAPTURED) != 0 ) {
-					// ¹¤¾ßÀ¸Î»ÖÃ
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 					RECT rcFav = m_rcItem;
 					RECT rcSet = m_rcItem;
 					rcFav.top = rcFav.bottom - 25;

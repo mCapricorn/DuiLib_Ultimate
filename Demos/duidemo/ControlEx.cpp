@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "ControlEx.h"
 
 //////////////////////////////////////////////////////////////////////////
@@ -121,8 +121,8 @@ bool CChartViewUI::DoPaint(HDC hDC, const RECT& rcPaint, CControlUI* pStopContro
 
 void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 {
-	// »­±ýÍ¼£¬ ÕâÏÂÃæÊ¹ÓÃÁËÒ»Ð©Ó²±àÂë£¬ ¸ù¾Ý±äÁ¿Ãû£¬ ¾Í¿ÉÒÔÖªµÀ´ó¸ÅÒâË¼ÁË
-	// ÑÕÉ«×ÜÊýÒÔ¼°ÑÕÉ«
+	// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ò»Ð©Ó²ï¿½ï¿½ï¿½ë£¬ ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Í¿ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½
+	// ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½É«
 	const int NumOfColor = 18;
 	static COLORREF bkColor[] = {
 		RGB(63, 150, 245), 
@@ -151,7 +151,7 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 		return;
 	}
 
-	// »æ»­ÎÄ×ÖÁô³ö¸ÃÖµµÄ¿í¶È
+	// ï¿½æ»­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä¿ï¿½ï¿½
 	int drawTextWidth = (m_bShowText ? 100 : 0);
 	int drawTextHeight = 18;
 
@@ -165,8 +165,8 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 	Gdiplus::Graphics graphics(hDC);
 	graphics.SetSmoothingMode(Gdiplus::SmoothingModeAntiAlias);
 
-	int drawPadding = 5; // Áô³öÒ»¶¨Î»ÖÃ»­ÒõÓ°
-	// ¼ÆËã»æÍ¼µÄºÏÊÊÎ»ÖÃ(¾ÓÖÐ»­±ýÍ¼)
+	int drawPadding = 5; // ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½Ã»ï¿½ï¿½ï¿½Ó°
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Äºï¿½ï¿½ï¿½Î»ï¿½ï¿½(ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Í¼)
 	int itemWidth = m_rcItem.right - m_rcItem.left;
 	int itemHeight = m_rcItem.bottom - m_rcItem.top;
 	int drawWidth = itemWidth - drawTextWidth - drawPadding * 2;
@@ -180,11 +180,11 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 		drawTextTop = m_rcItem.top + drawPadding;
 	}
 
-	// »­Íâ²¿µÄÇ³É«ÒõÓ°
+	// ï¿½ï¿½ï¿½â²¿ï¿½ï¿½Ç³É«ï¿½ï¿½Ó°
 	Gdiplus::Color ellipseColor1(30, 30, 30, 30);
 	Gdiplus::SolidBrush ellipseBrush1(ellipseColor1);
 	graphics.FillEllipse(&ellipseBrush1, drawLeft - 4, drawTop - 4, drawMaxSize + 8, drawMaxSize + 8);
-	// »­Íâ²¿µÄÉîÉ«ÂÖÀª
+	// ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½
 	Gdiplus::Color ellipseColor2(100, 100, 100, 100);
 	Gdiplus::SolidBrush ellipseBrush2(ellipseColor2);
 	graphics.FillEllipse(&ellipseBrush2, drawLeft - 1, drawTop - 1, drawMaxSize + 2, drawMaxSize + 2);
@@ -192,7 +192,7 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 	Gdiplus::REAL startAngle = 0;
 	for (int i = 0; i < numOfItem; i++)
 	{
-		// »­±ýÍ¼
+		// ï¿½ï¿½ï¿½ï¿½Í¼
 		Gdiplus::Color color;
 		color.SetFromCOLORREF(bkColor[i % NumOfColor]);
 		Gdiplus::SolidBrush brush(color);
@@ -201,12 +201,12 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 		graphics.FillPie(&brush,drawLeft, drawTop, drawMaxSize, drawMaxSize, startAngle, endAngle);
 		startAngle += endAngle;
 
-		// »­ÎÄ×Ö
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (m_bShowText)
 		{
-			// »æ»­ÎÄ×Ö
+			// ï¿½æ»­ï¿½ï¿½ï¿½ï¿½
 			RECT rcText = {0};
-			rcText.left = drawLeft + drawMaxSize + 10; // 10Îª±ýÍ¼ºÍÎÄ×ÖÖ®¼äµÄ¼ä¾à
+			rcText.left = drawLeft + drawMaxSize + 10; // 10Îªï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ä¼ï¿½ï¿½
 			rcText.top = drawTextTop;
 			rcText.right = rcText.left + drawTextWidth + drawTextHeight;
 			rcText.bottom = rcText.top + drawTextHeight;
@@ -215,7 +215,7 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 			{
 				graphics.FillRectangle(&brush, rcText.left, rcText.top, drawTextHeight, drawTextHeight);
 
-				rcText.left += drawTextHeight + 5; // ÒòÎªÔÚÎÄ×ÖÇ°Ãæ»­ÁËÒ»¸öÉ«¿é£¬ ËùÒÔÎÄ×ÖÒªÔÚÉ«¿éºóÃæÊä³ö, 5ÎªÎÄ×ÖºÍÉ«¿éµÄ¼ä¾à
+				rcText.left += drawTextHeight + 5; // ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½æ»­ï¿½ï¿½Ò»ï¿½ï¿½É«ï¿½é£¬ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 5Îªï¿½ï¿½ï¿½Öºï¿½É«ï¿½ï¿½Ä¼ï¿½ï¿½
 				int nLinks = 0;
 				DWORD clrColor = IsEnabled() ? m_dwTextColor : m_dwDisabledTextColor;
 				if(clrColor << 8 == 0) clrColor = 1;
@@ -231,7 +231,7 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 				}
 			}
 
-			// ¼ÆËãÏÂÒ»¸öÎÄ×ÖÊä³ö´¹Ö±Î»ÖÃµÄÆ«ÒÆÁ¿£¬ 4ÎªÎÄ×Ö´¹Ö±¼ä¾à
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±Î»ï¿½Ãµï¿½Æ«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 4Îªï¿½ï¿½ï¿½Ö´ï¿½Ö±ï¿½ï¿½ï¿½
 			drawTextTop += drawTextHeight + 4;
 		}
 	}
@@ -239,10 +239,10 @@ void CChartViewUI::DoPaintPie(HDC hDC, const RECT& rcPaint)
 
 void CChartViewUI::DoPaintHistogram(HDC hDC, const RECT& rcPaint)
 {
-	// »­Öù×´Í¼
-	int drawTextHeight = (m_bShowText ? 25 : 0);	// Öù×´Í¼µ×²¿Áô³ö¸ÃÖµµÄ¸ß¶ÈÒÔ»æÖÆÎÄ×Ö
+	// ï¿½ï¿½ï¿½ï¿½×´Í¼
+	int drawTextHeight = (m_bShowText ? 25 : 0);	// ï¿½ï¿½×´Í¼ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä¸ß¶ï¿½ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	// »­Öù×´Í¼ÒõÓ°
+	// ï¿½ï¿½ï¿½ï¿½×´Í¼ï¿½ï¿½Ó°
 	if (!m_sShadowImage.IsEmpty())
 	{
 		RECT rcShadow = m_rcItem;
@@ -274,15 +274,15 @@ void CChartViewUI::DoPaintHistogram(HDC hDC, const RECT& rcPaint)
 		amountOfItem += m_items[i].value;
 	}
 
-	int drawWidth = m_rcItem.right - m_rcItem.left;	// »æÍ¼¿í¶È
-	int drawHeight = m_rcItem.bottom - m_rcItem.top - drawTextHeight; // »æÍ¼¸ß¶È
-	int pillarSpacing = (drawWidth / m_PillarImageWidth) * 2;	// Öù×Ó¼ä¼ä¾à
+	int drawWidth = m_rcItem.right - m_rcItem.left;	// ï¿½ï¿½Í¼ï¿½ï¿½ï¿½
+	int drawHeight = m_rcItem.bottom - m_rcItem.top - drawTextHeight; // ï¿½ï¿½Í¼ï¿½ß¶ï¿½
+	int pillarSpacing = (drawWidth / m_PillarImageWidth) * 2;	// ï¿½ï¿½ï¿½Ó¼ï¿½ï¿½ï¿½
 
-	// Öù×ÓµÄ»æÖÆË®Æ½Æ«ÒÆÎ»ÖÃ
+	// ï¿½ï¿½ï¿½ÓµÄ»ï¿½ï¿½ï¿½Ë®Æ½Æ«ï¿½ï¿½Î»ï¿½ï¿½
 	int drawLeft = pillarSpacing;
 	for (i = 0; i < numOfItem; i++)
 	{
-		// »æ»­Öù×Ó
+		// ï¿½æ»­ï¿½ï¿½ï¿½ï¿½
 		if (!m_sPillarImage.IsEmpty())
 		{
 			double rateOfItem = m_items[i].value / maxOfItem;
@@ -299,7 +299,7 @@ void CChartViewUI::DoPaintHistogram(HDC hDC, const RECT& rcPaint)
 
 		if (m_bShowText)
 		{
-			// »æ»­ÎÄ×Ö
+			// ï¿½æ»­ï¿½ï¿½ï¿½ï¿½
 			RECT rcText = m_rcItem;
 			rcText.left = m_rcItem.left + drawLeft - pillarSpacing;
 			rcText.top = m_rcItem.bottom - drawTextHeight;
@@ -322,7 +322,7 @@ void CChartViewUI::DoPaintHistogram(HDC hDC, const RECT& rcPaint)
 		}
 
 
-		// ¼ÆËãÏÂÒ»¸öÖù×ÓµÄÆ«ÒÆÎ»ÖÃ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Æ«ï¿½ï¿½Î»ï¿½ï¿½
 		drawLeft += pillarSpacing;
 		drawLeft += m_PillarImageWidth;
 	}

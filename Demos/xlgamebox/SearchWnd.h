@@ -1,4 +1,4 @@
-#ifndef __SEARCHWND_H__
+﻿#ifndef __SEARCHWND_H__
 #define __SEARCHWND_H__
 
 class CSearchWnd : public CWindowWnd, public INotifyUI

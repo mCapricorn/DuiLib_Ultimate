@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include <exdisp.h>
 #include <comdef.h>
 #include "ControlEx.h"
@@ -16,22 +16,22 @@
 
 void InitResource()
 {
-	// ×ÊÔ´ÀàÐÍ
+	// ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
 #ifdef _DEBUG
 	CPaintManagerUI::SetResourceType(UILIB_FILE);
 #else
 	CPaintManagerUI::SetResourceType(UILIB_ZIPRESOURCE);
 #endif
-	// ×ÊÔ´Â·¾¶
+	// ï¿½ï¿½Ô´Â·ï¿½ï¿½
 	CDuiString strResourcePath = CPaintManagerUI::GetInstancePath();
-	// ¼ÓÔØ×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 	switch(CPaintManagerUI::GetResourceType())
 	{
 	case UILIB_FILE:
 		{
 			strResourcePath += _T("skin\\duidemo\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -39,7 +39,7 @@ void InitResource()
 		{
 			strResourcePath += _T("skin\\duidemo\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("IDR_RES"), _T("xml"));
 			break;
 		}
@@ -47,10 +47,10 @@ void InitResource()
 		{
 			strResourcePath += _T("skin\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÃÜ
+			// ï¿½ï¿½ï¿½ï¿½
 			CPaintManagerUI::SetResourceZip(_T("duidemo_pwd.zip"), true, _T("duilib_ultimate"));
 			//CPaintManagerUI::SetResourceZip(_T("duidemo.zip"), true);
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -66,7 +66,7 @@ void InitResource()
 					dwSize = ::SizeofResource(CPaintManagerUI::GetResourceDll(), hResource);
 					if( dwSize > 0 ) {
 						CPaintManagerUI::SetResourceZip((LPBYTE)::LockResource(hGlobal), dwSize, _T("323232"));
-						// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 					}
 				}
@@ -76,7 +76,7 @@ void InitResource()
 		break;
 	}
 
-	// ×¢²á¿Ø¼þ
+	// ×¢ï¿½ï¿½Ø¼ï¿½
 	REGIST_DUICONTROL(CCircleProgressUI);
 	REGIST_DUICONTROL(CMyComboUI);
 	REGIST_DUICONTROL(CChartViewUI);
@@ -92,25 +92,25 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 	if( FAILED(Hr) ) return 0;
 	// OLE
 	HRESULT hRes = ::OleInitialize(NULL);
-	// ³õÊ¼»¯UI¹ÜÀíÆ÷
+	// ï¿½ï¿½Ê¼ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	CPaintManagerUI::SetInstance(hInstance);
-	// ³õÊ¼»¯×ÊÔ´
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ô´
 	InitResource();
 
 
 	CSplashWnd::MessageBox(NULL);
 
-	// ´´½¨Ö÷´°¿Ú
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	CMainWnd* pMainWnd = new CMainWnd();
 	if( pMainWnd == NULL ) return 0;
-	pMainWnd->Create(NULL, _T("duilibÊ¹ÓÃÀý×Ó¼¯½õ£¨By Troy£©"), UI_WNDSTYLE_FRAME, 0L, 0, 0, 800, 572);
+	pMainWnd->Create(NULL, _T("duilibÊ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ó¼ï¿½ï¿½ï¿½ï¿½ï¿½By Troyï¿½ï¿½"), UI_WNDSTYLE_FRAME, 0L, 0, 0, 800, 572);
 	pMainWnd->CenterWindow();
-	// ÏûÏ¢Ñ­»·
+	// ï¿½ï¿½Ï¢Ñ­ï¿½ï¿½
 	CPaintManagerUI::MessageLoop();
-	// Ïú»Ù´°¿Ú
+	// ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½
 	delete pMainWnd;
 	pMainWnd = NULL;
-	// ÇåÀí×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 	CPaintManagerUI::Term();
 	// OLE
 	OleUninitialize();

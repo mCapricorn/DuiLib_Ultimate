@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Graph_Vector.h"
 #include "Graph_Def.h"

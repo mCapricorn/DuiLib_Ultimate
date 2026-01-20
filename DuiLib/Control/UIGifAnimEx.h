@@ -1,9 +1,9 @@
-#ifndef GifAnimUIEX_h__
+ï»¿#ifndef GifAnimUIEX_h__
 #define GifAnimUIEX_h__
 #pragma once
 /* write by wangji 2016.03.16
-** ½â¾ö¶à¸ögif¿Ø¼þÔÚgdi+»·¾³ÏÂÕ¼ÓÃCPU¹ý¸ßµÄÎÊÌâ£¬±¾Àà²ÉÓÃximageÌæ´ú
-** ×¢Òâ£ºÊ¹ÓÃµÄÊ±ºòÔÚÔ¤±àÒëÍ·ÎÄ¼þÖÐ°üº¬UIlib.hÇ°ÏÈ¶¨ÒåºêUSE_XIMAGE_EFFECT
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gifï¿½Ø¼ï¿½ï¿½ï¿½gdi+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½CPUï¿½ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ximageï¿½ï¿½ï¿½
+** ×¢ï¿½â£ºÊ¹ï¿½Ãµï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½Ð°ï¿½ï¿½ï¿½UIlib.hÇ°ï¿½È¶ï¿½ï¿½ï¿½ï¿½USE_XIMAGE_EFFECT
 ** #define USE_XIMAGE_EFFECT
 ** #include "UIlib.h"
 */

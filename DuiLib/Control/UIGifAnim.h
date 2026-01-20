@@ -1,4 +1,4 @@
-#ifndef GifAnimUI_h__
+ï»¿#ifndef GifAnimUI_h__
 #define GifAnimUI_h__
 
 #pragma once
@@ -38,17 +38,17 @@ namespace DuiLib
 		void	InitGifImage();
 		void	DeleteGif();
 		void    OnTimer( UINT_PTR idEvent );
-		void	DrawFrame( HDC hDC );		// »æÖÆGIFÃ¿Ö¡
+		void	DrawFrame( HDC hDC );		// ï¿½ï¿½ï¿½ï¿½GIFÃ¿Ö¡
 
 	private:
 		Gdiplus::Image	*m_pGifImage;
-		UINT			m_nFrameCount;				// gifÍ¼Æ¬×ÜÖ¡Êý
-		UINT			m_nFramePosition;			// µ±Ç°·Åµ½µÚ¼¸Ö¡
-		Gdiplus::PropertyItem*	m_pPropertyItem;	// Ö¡ÓëÖ¡Ö®¼ä¼ä¸ôÊ±¼ä
+		UINT			m_nFrameCount;				// gifÍ¼Æ¬ï¿½ï¿½Ö¡ï¿½ï¿½
+		UINT			m_nFramePosition;			// ï¿½ï¿½Ç°ï¿½Åµï¿½ï¿½Ú¼ï¿½Ö¡
+		Gdiplus::PropertyItem*	m_pPropertyItem;	// Ö¡ï¿½ï¿½Ö¡Ö®ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
 		CDuiString		m_sBkImage;
-		bool			m_bIsAutoPlay;				// ÊÇ·ñ×Ô¶¯²¥·Ågif
-		bool			m_bIsAutoSize;				// ÊÇ·ñ×Ô¶¯¸ù¾ÝÍ¼Æ¬ÉèÖÃ´óÐ¡
+		bool			m_bIsAutoPlay;				// ï¿½Ç·ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½gif
+		bool			m_bIsAutoSize;				// ï¿½Ç·ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½Ã´ï¿½Ð¡
 		bool			m_bIsPlaying;
 	};
 }

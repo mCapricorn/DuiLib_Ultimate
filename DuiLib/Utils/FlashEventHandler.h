@@ -1,7 +1,7 @@
-/*
-	´´½¨ÈÕÆÚ£º	2012/11/05 15:09:48
-	×÷Õß£º			daviyang35@gmail.com
-	ÃèÊö£º	FlashEventHandler
+ï»¿/*
+	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½	2012/11/05 15:09:48
+	ï¿½ï¿½ï¿½ß£ï¿½			daviyang35@gmail.com
+	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	FlashEventHandler
 */
 #pragma once
 //#include <ExDisp.h>

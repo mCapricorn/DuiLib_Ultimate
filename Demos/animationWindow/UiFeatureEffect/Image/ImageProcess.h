@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "..\Graph\Graph_WarpMatrix.h"
 using namespace Graph;
@@ -7,29 +7,29 @@ class CWarp
 {
 public:
 
-	// ½«Í¼Æ¬Å¤Çúµ½Í¹ËÄ±ßÐÎrcdesÖÐ
-	// input pData Í¼Æ¬Êý¾Ý
-	// input rcsrc Í¼Æ¬Ô­À´rect
-	// input output warprect Í¼Æ¬Å¤ÇúºóµÄrect
-	// output imgdes  Å¤ÇúºóµÄÍ¼Æ¬Êý¾Ý
-	// input bFill   ÊÇ·ñÓÃcolorÌî³äÆäËüÇøÓò
-	// Íâ²¿·ÖÅäÄÚ´æµÄ·½Ê½	
-	//remark  rcsrc ÊÇpDataµÄÏÂ±ê·¶Î§ rcBoundÊÇÍ¼Æ¬µÄ´óÐ¡²Ã¼ô·¶Î§£¨ÈçrcSrc 0,0,400,300-->rcBound 0,0,401,301)
+	// ï¿½ï¿½Í¼Æ¬Å¤ï¿½ï¿½ï¿½ï¿½Í¹ï¿½Ä±ï¿½ï¿½ï¿½rcdesï¿½ï¿½
+	// input pData Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
+	// input rcsrc Í¼Æ¬Ô­ï¿½ï¿½rect
+	// input output warprect Í¼Æ¬Å¤ï¿½ï¿½ï¿½ï¿½ï¿½rect
+	// output imgdes  Å¤ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
+	// input bFill   ï¿½Ç·ï¿½ï¿½ï¿½colorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ä·ï¿½Ê½	
+	//remark  rcsrc ï¿½ï¿½pDataï¿½ï¿½ï¿½Â±ê·¶Î§ rcBoundï¿½ï¿½Í¼Æ¬ï¿½Ä´ï¿½Ð¡ï¿½Ã¼ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½rcSrc 0,0,400,300-->rcBound 0,0,401,301)
 	static BOOL WarpImage(BYTE*pData,RECT &rcSrc,WarpRect &rcDes,RECT &rcBound,BYTE* imgDes,Color color = Color::Transparent,BOOL bFill = TRUE);
 
-	// ½«Í¼Æ¬rcSrc´óÐ¡µÄÄÚÈÝÅ¤Çúµ½Í¹ËÄ±ßÐÎrcdesÖÐ
-	// input pData Í¼Æ¬Êý¾Ý
-	// input srcDataWidth pdataµÄ¿í¶È
-	// input srcDataHeight pdataµÄ¸ß¶È
-	// input rcsrc Í¼Æ¬Ô­À´rect
-	// input output warprect Í¼Æ¬Å¤ÇúºóµÄrect
-	// output imgdes  Å¤ÇúºóµÄÍ¼Æ¬Êý¾Ý
-	// input bFill   ÊÇ·ñÓÃcolorÌî³äÆäËüÇøÓò
-	// Íâ²¿·ÖÅäÄÚ´æµÄ·½Ê½	
-	//remark  rcsrc ÊÇpDataµÄÏÂ±ê·¶Î§ rcBoundÊÇÍ¼Æ¬µÄ´óÐ¡²Ã¼ô·¶Î§£¨ÈçrcSrc 0,0,400,300-->rcBound 0,0,401,301)
+	// ï¿½ï¿½Í¼Æ¬rcSrcï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¤ï¿½ï¿½ï¿½ï¿½Í¹ï¿½Ä±ï¿½ï¿½ï¿½rcdesï¿½ï¿½
+	// input pData Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
+	// input srcDataWidth pdataï¿½Ä¿ï¿½ï¿½
+	// input srcDataHeight pdataï¿½Ä¸ß¶ï¿½
+	// input rcsrc Í¼Æ¬Ô­ï¿½ï¿½rect
+	// input output warprect Í¼Æ¬Å¤ï¿½ï¿½ï¿½ï¿½ï¿½rect
+	// output imgdes  Å¤ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
+	// input bFill   ï¿½Ç·ï¿½ï¿½ï¿½colorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ä·ï¿½Ê½	
+	//remark  rcsrc ï¿½ï¿½pDataï¿½ï¿½ï¿½Â±ê·¶Î§ rcBoundï¿½ï¿½Í¼Æ¬ï¿½Ä´ï¿½Ð¡ï¿½Ã¼ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½rcSrc 0,0,400,300-->rcBound 0,0,401,301)
 	static BOOL WarpImage(BYTE*pData,int srcDataWidth,int srcDataHeight, RECT &rcSrc,WarpRect &rcDes,RECT &rcBound,BYTE* imgDes,Color color = Color::Transparent,BOOL bFill = TRUE);
 
-	// ½«Í¼Æ¬rcSrc´óÐ¡µÄÄÚÈÝÅ¤Çúµ½Í¹ËÄ±ßÐÎrcdesÖÐ
+	// ï¿½ï¿½Í¼Æ¬rcSrcï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¤ï¿½ï¿½ï¿½ï¿½Í¹ï¿½Ä±ï¿½ï¿½ï¿½rcdesï¿½ï¿½
 	static BOOL WarpImage(BYTE *pData, int width, int height, BYTE* &imgDes, real param1);
 
 private:
@@ -45,47 +45,47 @@ private:
 class CMemery
 {
 public:
-	// Ìî³äÊý¾Ý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	static void SetPixels(BYTE *Data,int width, int height, DWORD iValue);
-	// Ìî³ä¾Ö²¿Êý¾Ý
+	// ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½
 	static void SetPixels(BYTE *Data,int stride, int left, int top, int right, int bottom, DWORD iValue);
-	// ¿½±´Êý¾Ý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	static void CopyPixels(BYTE*DataDes,int strideDes,int leftDes,int topDes,int rightDes,int bottomDes,BYTE *DataSrc,int strideSrc,int leftSrc,int topSrc);
 };
 
 class CBlinds
 {
 public:
-	// ½«Í¼Æ¬´¦Àí³É°ÙÒ¶´°ÌØÐ§
+	// ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½É°ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½Ð§
 	// input Data
-	// input width height Í¼ÏñµÄ³¤ºÍ¿í
-	// input iBlindHeight°ÙÒ¶Ð§¹ûµÄ¸ß¶È£¬iBlindNum°ÙÒ¶Ð§¹ûµÄ¸öÊý
-	// offset Ã¿¸ö°ÙÒ¶Ð§¹ûÒª´¦ÀíµÄÐÐ¾àÀë×Ô¼ºÊ×ÐÐµÄ¾àÀë£¨ÏñËØ£©
-	// color  °ÙÒ¶µÄÑÕÉ«
+	// input width height Í¼ï¿½ï¿½Ä³ï¿½ï¿½Í¿ï¿½
+	// input iBlindHeightï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½Ä¸ß¶È£ï¿½iBlindNumï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+	// offset Ã¿ï¿½ï¿½ï¿½ï¿½Ò¶Ð§ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ÐµÄ¾ï¿½ï¿½ë£¨ï¿½ï¿½ï¿½Ø£ï¿½
+	// color  ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½É«
 	// output Data
 	static BOOL BlindsH(BYTE *Data,int width, int height,int iBlindHeight,int iBlindNum,int offsetDistance,DWORD color = 0);
-	// ½«Í¼Æ¬´¦Àí³É°ÙÒ¶´°ÌØÐ§
+	// ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½É°ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½Ð§
 	// input Data
-	// input width height Í¼ÏñµÄ³¤ºÍ¿í
-	// input iBlindWidth°ÙÒ¶Ð§¹ûµÄkuan¶È£¬iBlindNum°ÙÒ¶Ð§¹ûµÄ¸öÊý
-	// offset Ã¿¸ö°ÙÒ¶Ð§¹ûÒª´¦ÀíµÄÁÐ¾àÀë×Ô¼ºÊ×ÁÐµÄ¾àÀë£¨ÏñËØ£©
-	// color  °ÙÒ¶µÄÑÕÉ«
+	// input width height Í¼ï¿½ï¿½Ä³ï¿½ï¿½Í¿ï¿½
+	// input iBlindWidthï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½ï¿½kuanï¿½È£ï¿½iBlindNumï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+	// offset Ã¿ï¿½ï¿½ï¿½ï¿½Ò¶Ð§ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ÐµÄ¾ï¿½ï¿½ë£¨ï¿½ï¿½ï¿½Ø£ï¿½
+	// color  ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½É«
 	// output Data
 	static BOOL BlindsV(BYTE *Data,int width, int height,int iBlindWidth,int iBlindNum,int offsetDistance,DWORD color = 0);
-	// ½«Í¼Æ¬ÒÔ°ÙÒ¶·½Ê½¿½±´ÌØÐ§
+	// ï¿½ï¿½Í¼Æ¬ï¿½Ô°ï¿½Ò¶ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
 	// input DataDes
 	// input DataSrc
-	// input width height Í¼ÏñµÄ³¤ºÍ¿í
-	// input iBlindHeight°ÙÒ¶Ð§¹ûµÄ¸ß¶È£¬iBlindNum°ÙÒ¶Ð§¹ûµÄ¸öÊý
-	// offset Ã¿¸ö°ÙÒ¶Ð§¹ûÒª´¦ÀíµÄÐÐ¾àÀë×Ô¼ºÊ×ÐÐµÄ¾àÀë£¨ÏñËØ£©
+	// input width height Í¼ï¿½ï¿½Ä³ï¿½ï¿½Í¿ï¿½
+	// input iBlindHeightï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½Ä¸ß¶È£ï¿½iBlindNumï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+	// offset Ã¿ï¿½ï¿½ï¿½ï¿½Ò¶Ð§ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ÐµÄ¾ï¿½ï¿½ë£¨ï¿½ï¿½ï¿½Ø£ï¿½
 	// output DataDes
 	static BOOL BlindsH(BYTE *DataDes,BYTE *DataSrc,int width, int height,int iBlindHeight,int iBlindNum,int offsetDistance);
-	// ½«Í¼Æ¬ÒÔ°ÙÒ¶·½Ê½¿½±´ÌØÐ§
+	// ï¿½ï¿½Í¼Æ¬ï¿½Ô°ï¿½Ò¶ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
 	// input DataDes
 	// input DataSrc
-	// input width height Í¼ÏñµÄ³¤ºÍ¿í
-	// input iBlindWidth°ÙÒ¶Ð§¹ûµÄkuan¶È£¬iBlindNum°ÙÒ¶Ð§¹ûµÄ¸öÊý
-	// offset Ã¿¸ö°ÙÒ¶Ð§¹ûÒª´¦ÀíµÄÁÐ¾àÀë×Ô¼ºÊ×ÁÐµÄ¾àÀë£¨ÏñËØ£©
+	// input width height Í¼ï¿½ï¿½Ä³ï¿½ï¿½Í¿ï¿½
+	// input iBlindWidthï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½ï¿½kuanï¿½È£ï¿½iBlindNumï¿½ï¿½Ò¶Ð§ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+	// offset Ã¿ï¿½ï¿½ï¿½ï¿½Ò¶Ð§ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ÐµÄ¾ï¿½ï¿½ë£¨ï¿½ï¿½ï¿½Ø£ï¿½
 	// output DataDes
 	static BOOL BlindsV(BYTE *DataDes,BYTE *DataSrc,int width, int height,int iBlindWidth,int iBlindNum,int offsetDistance);
 };
@@ -93,14 +93,14 @@ public:
 class CAlpha
 {
 public:
-	// ÉèÖÃÍ¼ÏñµÄalpha
+	// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½alpha
 	// alphachange 0~1
 	static void SetAlpha(BYTE *Data,int width, int height,real alphaChange);
 
-	//MMXÉèÖÃÍ¼Æ¬µÄalphaÖµÎªÖ¸¶¨µÄÖµ
+	//MMXï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½alphaÖµÎªÖ¸ï¿½ï¿½ï¿½ï¿½Öµ
 	static void SetAlphaMMX(BYTE *Data,int width, int height,BYTE alphaNew);
 
-	//ÉèÖÃÍ¼Ïñ¾Ö²¿µÄalpha
+	//ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ö²ï¿½ï¿½ï¿½alpha
 	static void SetAlpha(BYTE *Data,int stride, int left ,int top, int right, int bottom, real alphaChange);
 };
 
@@ -110,32 +110,32 @@ public:
 	CWater(){m_iParticleAmplitudeField1 = m_iParticleAmplitudeField2 = NULL;};
 	~CWater(){};
 
-	// ´´½¨Ë®²¨Á£×ÓÏµÍ³,±ØÐëÓëDestory³É¶ÔÊ¹ÓÃ
+	// ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Destoryï¿½É¶ï¿½Ê¹ï¿½ï¿½
 	BOOL Create(int iWidth,int iHeight);
 
-	// É¾³ýÁ£×ÓÏµÍ³,±ØÐëÓëCreate³É¶ÔÊ¹ÓÃ
+	// É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Createï¿½É¶ï¿½Ê¹ï¿½ï¿½
 	BOOL Destory();
 
-	//  ÉèÖÃË¥¼õ×èÄáÏµÊý£¬Ä¬ÈÏÔÚ´´½¨Á£×ÓµÄÊ±ºò³õÊ¼»¯Îª6
+	//  ï¿½ï¿½ï¿½ï¿½Ë¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Îª6
 	BOOL SetDensity(int idensity);
 
-	// ¸´Î»Á£×ÓÕñ·ù
+	// ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	BOOL ResetAmplitude();
 
-	// Éú³ÉÒ»¸öÕðµ´²¨
-	// x ,y						Î»ÖÃ
-	// radius					°ë¾¶
-	// amplitude				Õñ·ù
+	// ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ðµ´²ï¿½
+	// x ,y						Î»ï¿½ï¿½
+	// radius					ï¿½ë¾¶
+	// amplitude				ï¿½ï¿½ï¿½
 	BOOL AmplitudeBlob(int x, int y, int radius, int amplitude);
 
-	// äÖÈ¾Á£×ÓÏµÍ³£¬Éú³ÉË®²¨Í¼Æ¬
+	// ï¿½ï¿½È¾ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½Í¼Æ¬
 	BOOL WaterImage(BYTE* pSrcImage,BYTE* pTargetImage);
 
 private:
-	// ¼ÆËãnpageÒ³µÄÕñ·ù
+	// ï¿½ï¿½ï¿½ï¿½npageÒ³ï¿½ï¿½ï¿½ï¿½ï¿½
 	BOOL CalcWaterAmplitude(int npage, int density);
 
-	// ¸ù¾ÝnpageÒ³µÄÕñ·ùÉú³ÉÍ¼Æ¬
+	// ï¿½ï¿½ï¿½ï¿½npageÒ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 	BOOL DrawWaterWithLight(int page,BYTE* pSrcImage,BYTE* pTargetImage);
 private:
 	int			m_iWidth;						// width
@@ -160,11 +160,11 @@ private:
 	void ThreeOrder(const BYTE *DataSrc, const int srcStride, const real fx, const real fy, BYTE *resultColor);
 	void ThreeOrderBorder(const BYTE *DataSrc, const int srcStride, int srcLeft, int srcTop, const int srcWidth, const int srcHeight, const real fx, const real fy, BYTE *resultColor);
 	inline void GetBorderColor(const BYTE *DataSrc, const int srcStride, int row, int col, real* borderColor);
-	// ¸ßÖÊÁ¿²åÖµËã·¨£¨Èý´Î¾í»ý²åÖµ£©
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½Î¾ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
 	BOOL Scale(BYTE *DataDes, int desWidth, int desHeight, BYTE *DataSrc, int srcStride, int srcLeft, int srcTop, int srcWidth, int srcHeight, real sharpenCoefficient);
-	// µÍÖÊÁ¿²åÖµËã·¨£¨ÁÙ½üµã²åÖµ£©
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ã·¨ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
 	BOOL Scale(BYTE *DataDes, int desWidth, int desHeight, BYTE *DataSrc, int srcStride, int srcleft, int srctop, int srcWidth, int srcHeight);
-	// ÖÐÖÊÁ¿²åÖµËã·¨£¨Ë«ÏßÐÔ²åÖµ£©
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ã·¨ï¿½ï¿½Ë«ï¿½ï¿½ï¿½Ô²ï¿½Öµï¿½ï¿½
 	BOOL BilinearScale(BYTE *DataDes, int desWidth, int desHeight, BYTE *DataSrc, int srcStride, int srcleft, int srctop, int srcWidth, int srcHeight);
 
 private:
@@ -181,7 +181,7 @@ private:
 	static BOOL AlphaBlend(BYTE *desData, int desStride, int desLeft, int desTop, int desWidth, int desHeight, BYTE *srcData, int srcStride, int srcLeft, int srcTop, BYTE sourceAlpha = 255);
 public:
 	// interface
-	// interpolationMode ²åÖµÄ£Ê½£¬Ä¬ÈÏÎªÁÙ½üµã²åÖµ
+	// interpolationMode ï¿½ï¿½ÖµÄ£Ê½ï¿½ï¿½Ä¬ï¿½ï¿½Îªï¿½Ù½ï¿½ï¿½ï¿½ï¿½Öµ
 	static BOOL AlphaBlend(BYTE *desData, int desStride, int desLeft, int desTop, int desWidth, int desHeight, BYTE *srcData, int srcStride, int srcLeft, int srcTop, int srcWidth, int srcHeight, BYTE sourceAlpha = 255, int interpolationMode = 0);
 };
 
@@ -196,10 +196,10 @@ public:
 class CTraileBlur
 {
 public:
-	//¾ùÖµÄ£ºý
+	//ï¿½ï¿½ÖµÄ£ï¿½ï¿½
 	//input DataSrc
-	//input width height Í¼ÏñµÄ³¤ºÍ¿í
-	//input length Ä£ºý·¶Î§
+	//input width height Í¼ï¿½ï¿½Ä³ï¿½ï¿½Í¿ï¿½
+	//input length Ä£ï¿½ï¿½ï¿½ï¿½Î§
 	//output DataDes
 	static BOOL TraileBlur(BYTE *DataDes, BYTE *DataSrc, int width, int height, int lengthBlur);
 };

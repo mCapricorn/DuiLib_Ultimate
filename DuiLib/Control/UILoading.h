@@ -1,4 +1,4 @@
-#ifndef __UILoadingCircle_H
+ï»¿#ifndef __UILoadingCircle_H
 #define __UILoadingCircle_H
 
 namespace DuiLib
@@ -41,12 +41,12 @@ protected:
 	int                 m_nTime;
 	bool				m_bStop;
 
-	int m_NumberOfSpoke;//·øÌõÊýÁ¿
-	int m_SpokeThickness;//·øÌõ´ÖÏ¸
+	int m_NumberOfSpoke;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int m_SpokeThickness;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
 	int m_ProgressValue;//------------------------
-	int m_OuterCircleRadius;//ÍâÈ¦
-	int m_InnerCircleRadius;//ÄÚÈ¦
-	Gdiplus::PointF m_CenterPoint;//¶þÎ¬Æ½ÃæµÄµã
+	int m_OuterCircleRadius;//ï¿½ï¿½È¦
+	int m_InnerCircleRadius;//ï¿½ï¿½È¦
+	Gdiplus::PointF m_CenterPoint;//ï¿½ï¿½Î¬Æ½ï¿½ï¿½Äµï¿½
 	Gdiplus::Color m_Color;
 	Gdiplus::Color* m_Colors;
 	double* m_Angles;

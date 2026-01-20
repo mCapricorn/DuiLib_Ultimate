@@ -1,4 +1,4 @@
-
+ï»¿
 #include "StdAfx.h"
 #include "shlwapi.h"
 #include "..\MacroDefine.h"
@@ -87,7 +87,7 @@ bool IUiEffectManagerImpl::LoadEffectDll()
 	return true;
 }
 
-// µÃµ½Ò»¸ö¶¯»­¶ÔÏó
+// ï¿½Ãµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 IUIEffect* IUiEffectManagerImpl::GetAnimation()
 {
 	if (m_hEffectDll == NULL || m_funGetAnimation == NULL)
@@ -96,7 +96,7 @@ IUIEffect* IUiEffectManagerImpl::GetAnimation()
 	return m_funGetAnimation();
 }
 
-// É¾³ýÒ»¸ö¶¯»­¶ÔÏó
+// É¾ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool IUiEffectManagerImpl::ReleaseAnimation(IUIEffect* &pUIEffect)
 {
 	if (m_hEffectDll == NULL || m_funReleaseAnimation == NULL)

@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 
 
 CFrameWnd::CFrameWnd( LPCTSTR pszXMLPath )
@@ -31,7 +31,7 @@ void CFrameWnd::InitWindow()
 
 void CFrameWnd::OnPrepare(TNotifyUI& msg)
 {
-	if (IDOK == MessageBoxW(m_hWnd, L"µ¥»úÈ·¶¨ºó¿ªÊ¼ÑÝÊ¾79¸ö¶¯»­Ð§¹û", L"ÌáÊ¾", MB_OKCANCEL))
+	if (IDOK == MessageBoxW(m_hWnd, L"ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ê¾79ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½", L"ï¿½ï¿½Ê¾", MB_OKCANCEL))
 	{
 		m_pAnimLayout->StartEffect();
 	}

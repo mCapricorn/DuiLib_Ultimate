@@ -1,4 +1,4 @@
-#ifndef __CONTROL_INCLUDE_H__
+﻿#ifndef __CONTROL_INCLUDE_H__
 #define __CONTROL_INCLUDE_H__
 
 #include <vector>

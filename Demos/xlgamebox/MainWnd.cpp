@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "MainWnd.h"
 
 //////////////////////////////////////////////////////////////////////////
@@ -29,9 +29,9 @@ void CMainPage::OnClick(TNotifyUI& msg)
 		if(find_ctrl)
 		{
 			MessageBox(NULL, 
-				find_ctrl->GetText()+_T(" ÑÝÊ¾Î´Ñ¡ÖÐÐÐÖÐµÄ°´Å¥´¥·¢¶¯×÷£¬ÒÀ¸Ã°´Å¥¸¸½áµãµÄÕÒµ½ËùÊôÐÐlistcontainer.."), 
+				find_ctrl->GetText()+_T(" ï¿½ï¿½Ê¾Î´Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½listcontainer.."), 
 				_T("DUILIB DEMO"), MB_OK);   
-			((CLabelUI *)find_ctrl)->SetText(_T("ÓÉ³ÌÐò¶¯Ì¬ÉèÖÃºóµÄÃû³Æ..."));
+			((CLabelUI *)find_ctrl)->SetText(_T("ï¿½É³ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..."));
 		}
 		}
 	else if(msg.pSender->GetName() == _T("down_del"))
@@ -198,7 +198,7 @@ void CMainWnd::OnItemClick( TNotifyUI &msg )
 {
 	TCHAR alert_msg[64] = {0};
 	int index = ((CListContainerElementUI *)msg.pSender)->GetIndex();
-	wsprintf(alert_msg, _T("Ñ¡ÖÐÁËÐÐ%d, ²éÕÒ±¾ÐÐÄÚµÄÏÂÔØÏîÄ¿Ãû..."), index);
+	wsprintf(alert_msg, _T("Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%d, ï¿½ï¿½ï¿½Ò±ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½..."), index);
 	MessageBox(NULL, alert_msg, _T("DUILIB DEMO"), MB_OK);            
 
 	CControlUI *find_ctrl =m_pm.FindSubControlByName(msg.pSender, _T("down_name"));
@@ -206,13 +206,13 @@ void CMainWnd::OnItemClick( TNotifyUI &msg )
 	if(find_ctrl)
 	{
 		MessageBox(NULL, 
-			find_ctrl->GetText()+_T(" Ñ¡ÖÐÐÐµÄÏÂÔØÏîÄ¿Ãû³Æ.."), 
+			find_ctrl->GetText()+_T(" Ñ¡ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½.."), 
 			_T("DUILIB DEMO"), MB_OK);   
-		((CLabelUI *)find_ctrl)->SetText(_T("ÓÉ³ÌÐò¶¯Ì¬ÉèÖÃºóµÄÃû³Æ..."));
+		((CLabelUI *)find_ctrl)->SetText(_T("ï¿½É³ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..."));
 	}
 	else
 	{
-		MessageBox(NULL, _T("±¾²âÊÔÐÐÎ´Îª¿Ø¼þÉèÖÃname£¬¹ÊÕÒ²»µ½Òª²Ù×÷µÄ¿Ø¼þ"), 
+		MessageBox(NULL, _T("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´Îªï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Ø¼ï¿½"), 
 			_T("DUILIB DEMO"), MB_OK);   
 	}
 
@@ -221,11 +221,11 @@ void CMainWnd::OnItemClick( TNotifyUI &msg )
 	if(find_ctrl)
 	{
 		TCHAR alert_msg[256] = {0};
-		wsprintf(alert_msg, _T("½ø¶ÈÌõÖµ:%d"), ((CProgressUI *)find_ctrl)->GetValue());
+		wsprintf(alert_msg, _T("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ:%d"), ((CProgressUI *)find_ctrl)->GetValue());
 		MessageBox(NULL, alert_msg, _T("DUILIB DEMO"), MB_OK);   
 
 		((CProgressUI *)find_ctrl)->SetValue(30);
-		MessageBox(NULL, _T("ÐÞ¸ÄÁË½ø¶ÈÌõÖµ"), _T("DUILIB DEMO"), MB_OK);   
+		MessageBox(NULL, _T("ï¿½Þ¸ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ"), _T("DUILIB DEMO"), MB_OK);   
 	}
 }
 
@@ -236,7 +236,7 @@ void CMainWnd::Notify( TNotifyUI &msg )
 
 LRESULT CMainWnd::OnMouseWheel( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 {
-	// ½â¾öie¿Ø¼þÊÕ²»µ½¹ö¶¯ÏûÏ¢µÄÎÊÌâ
+	// ï¿½ï¿½ï¿½ieï¿½Ø¼ï¿½ï¿½Õ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
 	::ScreenToClient(m_pm.GetPaintWindow(), &pt);
 	CControlUI* pControl = static_cast<CControlUI*>(m_pm.FindControl(_T("ie")));
@@ -253,7 +253,7 @@ LRESULT CMainWnd::OnMouseWheel( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 
 LRESULT CMainWnd::OnSysCommand( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 {
-	// ÓÐÊ±»áÔÚÊÕµ½WM_NCDESTROYºóÊÕµ½wParamÎªSC_CLOSEµÄWM_SYSCOMMAND
+	// ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½WM_NCDESTROYï¿½ï¿½ï¿½Õµï¿½wParamÎªSC_CLOSEï¿½ï¿½WM_SYSCOMMAND
 	if( wParam == SC_CLOSE ) {
 		::PostQuitMessage(0L);
 		bHandled = TRUE;
@@ -298,10 +298,10 @@ LRESULT CMainWnd::OnMouseHover(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
 	POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
 	CControlUI* pHover = m_pm.FindControl(pt);
 	if( pHover == NULL ) return 0;
-	/*ÑÝÊ¾ÐüÍ£ÔÚÏÂÔØÁÐ±íµÄÍ¼±êÉÏÊ±£¬¶¯Ì¬±ä»»ÏÂÔØÍ¼±ê×´Ì¬ÏÔÊ¾*/
+	/*ï¿½ï¿½Ê¾ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ä»»ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½×´Ì¬ï¿½ï¿½Ê¾*/
 	if(pHover->GetName() == _T("down_ico"))
 	{
-		MessageBox(NULL, _T("Êó±êÔÚÄ³¿Ø¼þÀýÈç°´Å¥ÉÏÐüÍ£ºó£¬¶ÔÄ¿±ê¿Ø¼þ²Ù×÷£¬ÕâÀï¸Ä±äÁË×´Ì¬Í¼±ê´óÐ¡"), _T("DUILIB DEMO"), MB_OK);
+		MessageBox(NULL, _T("ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ç°´Å¥ï¿½ï¿½ï¿½ï¿½Í£ï¿½ó£¬¶ï¿½Ä¿ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½×´Ì¬Í¼ï¿½ï¿½ï¿½Ð¡"), _T("DUILIB DEMO"), MB_OK);
 		((CButtonUI *)pHover)->ApplyAttributeList(
 			_T("normalimage=\"file='downlist_pause.png' dest='15,9,32,26'\""));                
 	}
@@ -310,11 +310,11 @@ LRESULT CMainWnd::OnMouseHover(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
 
 LRESULT CMainWnd::OnChar( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 {
-	/*ÑÝÊ¾¼üÅÌÏûÏ¢µÄ´¦Àí*/
+	/*ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½Ä´ï¿½ï¿½ï¿½*/
 	TCHAR press_char = (TCHAR)wParam;
 	if(press_char == VK_BACK)
 	{
-		MessageBox(NULL, _T("°´ÏÂÁË»ØÍË¼ü"), _T("DUILIB DEMO"), MB_OK);
+		MessageBox(NULL, _T("ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½Ë¼ï¿½"), _T("DUILIB DEMO"), MB_OK);
 	}
 	else
 	{

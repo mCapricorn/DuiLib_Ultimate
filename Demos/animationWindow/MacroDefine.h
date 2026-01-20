@@ -1,4 +1,4 @@
-#ifndef MacroDefine_h__
+﻿#ifndef MacroDefine_h__
 #define MacroDefine_h__
 
 

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <emmintrin.h>
 
@@ -7,11 +7,11 @@ namespace Graph
 	class Vector 
 	{
 	public:
-		// w == 1 µã£¬  ÓÐÆ½ÒÆ
-		// w == 0 ÏòÁ¿£¬Ã»ÓÐÆ½ÒÆ
+		// w == 1 ï¿½ã£¬  ï¿½ï¿½Æ½ï¿½ï¿½
+		// w == 0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Æ½ï¿½ï¿½
 		__declspec(align(16)) real m_vector[4];
 
-		// ¹¹Ôìº¯Êý
+		// ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 
 		inline Vector::Vector()
 		{
@@ -36,7 +36,7 @@ namespace Graph
 			m_vector[3]=_w;
 		}
 
-		// ÉèÖÃÏòÁ¿
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		inline void Vector::SetVector(const real* v)
 		{
 			m_vector[0]=v[0];
@@ -53,7 +53,7 @@ namespace Graph
 			m_vector[3]=_w;
 		}
 
-		// ¼õ·¨
+		// ï¿½ï¿½ï¿½ï¿½
 		inline void Vector::Difference(const Vector* pSrc, const Vector* pDest)
 		{
 			m_vector[0]=pDest->m_vector[0] - pSrc->m_vector[0];
@@ -62,7 +62,7 @@ namespace Graph
 			m_vector[3]=1.0f;			
 		}
 
-		// ·´ÏòÁ¿
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		inline void Vector::Inverse()
 		{
 			m_vector[0]=-m_vector[0];
@@ -71,13 +71,13 @@ namespace Graph
 			m_vector[3]=1.0f;
 		}
 
-		// ÊÇ·ñµ¥Î»ÏòÁ¿
+		// ï¿½Ç·ï¿½Î»ï¿½ï¿½ï¿½ï¿½
 		inline bool Vector::IsNormalized()
 		{
 			return D_Equal(m_vector[0]*m_vector[0]+m_vector[1]*m_vector[1]+m_vector[2]*m_vector[2], 1.0f);
 		}
 
-		// ÔËËã·ûÖØÔØ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		inline void Vector::operator += (Vector& v)
 		{
 			m_vector[0]+=v.m_vector[0];
@@ -148,13 +148,13 @@ namespace Graph
 				((m_vector[2]-v.m_vector[2])<dConst_MinPrecision && (m_vector[2]-v.m_vector[2])>-dConst_MinPrecision))? false:true);
 		}
 
-		// ÏòÁ¿³¤¶ÈµÄÆ½·½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½Æ½ï¿½ï¿½
 		real Vector::GetLengthSq() 
 		{
 			return m_vector[0]*m_vector[0] + m_vector[1]*m_vector[1] + m_vector[2]*m_vector[2];
 		}
 
-		// ÏòÁ¿³¤¶È
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		float Vector::GetLength()
 		{
 			float f;
@@ -181,7 +181,7 @@ namespace Graph
 			}
 
 		}
-		// µ¥Î»»¯ÏòÁ¿
+		// ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void Vector::Normalize()
 		{
 			_asm
@@ -208,7 +208,7 @@ namespace Graph
 
 		}
 
-		// Í¨¹ýÁ½ÏòÁ¿Çó²æ³Ë,½á¹û±£´æÔÚ¸ÃÏòÁ¿ÖÐ
+		// Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void Vector::Cross(const Vector* pU, const Vector* pV)
 		{
 			_asm
@@ -239,7 +239,7 @@ namespace Graph
 
 		}
 
-		// ÇóÁ½ÏòÁ¿¼Ð½Ç
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½
 		real Vector::AngleWith(Vector& v)
 		{
 			return (real)acosf((*this * v)/(this->GetLength()*v.GetLength()*2.0f));

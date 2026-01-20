@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "UIPageControl.h"
 
 #pragma warning(disable:4996)
@@ -322,13 +322,13 @@ namespace DuiLib
             }
         }
 
-        //¸üÐÂË÷Òý
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         UpdateItemIndex();
 
-        //¸üÐÂÒ³Âë
+        //ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
         UpdatePageNo(0, true);
 
-        //Ñ¡ÖÐ
+        //Ñ¡ï¿½ï¿½
         if (m_nSelPageNo == -1 || m_nSelPageNo > m_nShowPage)
         {
             SelectPage(0);
@@ -440,7 +440,7 @@ namespace DuiLib
         if (nGotoPageNo > 0 && nGotoPageNo <= m_nMaxPage)
         {
             int nExistsPageNoIdx = GetIndexByPageNo(nGotoPageNo);
-            //Ò³Ãæ´æÔÚµ«ÊÇ²»ÊÇ×îºóÒ»¸öÒ³Âë
+            //Ò³ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ò³ï¿½ï¿½
             if (nExistsPageNoIdx != -1 && nExistsPageNoIdx != m_OptPageNoArr.GetSize() - 1)
             {
                 SelectPage(nExistsPageNoIdx);
@@ -473,7 +473,7 @@ namespace DuiLib
         }
         else if (bAutoGotoOneWhenError)
         {
-            DUITRACE(_T("Ë÷ÒýÔ½½ç£¬Ñ¡ÖÐµÚÒ»¸öÒ³"));
+            DUITRACE(_T("ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ç£¬Ñ¡ï¿½Ðµï¿½Ò»ï¿½ï¿½Ò³"));
             SelectPage(0);
         }
     }
@@ -568,10 +568,10 @@ namespace DuiLib
                 if (iPageIndex == m_OptPageNoArr.GetSize() - 1)
                 {
                     int nPrePageNo = GetPageNoByControl((CControlUI*)m_OptPageNoArr[m_OptPageNoArr.GetSize() - 2]);
-                    //Ç°N-1¸ö¸üÐÂµ½×îºóÒ»Ò³
+                    //Ç°N-1ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½Ò»Ò³
                     int nDelta = m_nMaxPage - nPrePageNo - 1;
                     UpdatePageNo(nDelta);
-                    //¸üÐÂmore°´Å¥ÊÇ·ñÏÔÊ¾
+                    //ï¿½ï¿½ï¿½ï¿½moreï¿½ï¿½Å¥ï¿½Ç·ï¿½ï¿½ï¿½Ê¾
                     UpdateMoreBtnVisiable();
                 }
 
@@ -593,10 +593,10 @@ namespace DuiLib
                 int nFirstPageNo = GetPageNoByControl((COptionUI*)m_OptPageNoArr[0]);
                 int iPageIndex = ((COptionUI*)m_OptPageNoArr[0])->GetTag();
 
-                //µÚÒ»¸öÒ³ÂëÊÇ1
+                //ï¿½ï¿½Ò»ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½1
                 if (nFirstPageNo == 1)
                 {
-                    //×óÒÆÑ¡ÖÐ,µ±Ç°Ñ¡ÖÐ²»ÊÇµÚÒ»Ò³
+                    //ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½,ï¿½ï¿½Ç°Ñ¡ï¿½Ð²ï¿½ï¿½Çµï¿½Ò»Ò³
                     if (iCurSelIndex != 0) SelectPage(--iCurSelIndex);
                 }
                 else
@@ -605,17 +605,17 @@ namespace DuiLib
                     {
                         //if (iCurSelIndex >= 0)
                         {
-                            //Ç°N-1¸öÒ³Âë-1
+                            //Ç°N-1ï¿½ï¿½Ò³ï¿½ï¿½-1
                             UpdatePageNo(-1);
-                            //²»ÒÆ¶¯¸üÐÂÑ¡ÖÐ
+                            //ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
                             SelectPage(iCurSelIndex);
                         }
 
                     }
-                    //(Ñ¡ÖÐ×îºóÒ»¸ö)
+                    //(Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½)
                     else
                     {
-                        //×óÒÆÑ¡ÖÐ
+                        //ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
                         SelectPage(--iCurSelIndex);
                     }
                 }
@@ -628,20 +628,20 @@ namespace DuiLib
                 int nCurSelPage = GetCurSel();
                 int nCurSelIdx = m_ConCurSel->GetTag();
 
-                //µ±Ç°Ñ¡ÖÐÊÇµ¹ÊýµÚ¶þ¸öÖ®Ç°µÄÒ³
+                //ï¿½ï¿½Ç°Ñ¡ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Ò³
                 if (nCurSelIdx < GetShowPageNum() - 1)
                 {
-                    //²»´æÔÚÏÂÒ»¸ö¸ü¶à°´Å¥»òÕß²»ÊÇµ¹ÊýµÚ¶þ¸ö°´Å¥
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½à°´Å¥ï¿½ï¿½ï¿½ß²ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
                     if (!IsExistNextMore() || nCurSelIdx != GetShowPageNum() - 2)
                     {
-                        //ÓÒÒÆÑ¡ÖÐ
+                        //ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
                         SelectPage(++nCurSelIdx);
                     }
-                    else//´æÔÚ¸ü¶à°´Å¥
+                    else//ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½à°´Å¥
                     {
-                        //Ò³Âë+1
+                        //Ò³ï¿½ï¿½+1
                         UpdatePageNo(1);
-                        //Í¨ÖªÑ¡ÖÐ
+                        //Í¨ÖªÑ¡ï¿½ï¿½
                         SelectPage(nCurSelIdx);
                     }
                 }

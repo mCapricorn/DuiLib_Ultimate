@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <float.h>
 #include "Graph_Math.h"
@@ -22,8 +22,8 @@ namespace Graph
 	template<class T, bool t_bFloat>
 	class CdRectT : public DRECTT<T>
 	{
-		//ÒòÎªÄ£°å²»Ö§³ÖÓÃ¸¡µãÊý×÷Îª²ÎÊý
-		//²»ÄÜ¶¨Òå³Étemplate<class T, double t_dValue> class CdRectT
+		//ï¿½ï¿½ÎªÄ£ï¿½å²»Ö§ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+		//ï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½ï¿½template<class T, double t_dValue> class CdRectT
 		
 		typedef DRECTT<T> baseClass;
 		typedef CdRectT<T, t_bFloat> thisClass;
@@ -751,7 +751,7 @@ namespace Graph
 			AdjustRect();
 		}
 
-		// ÅÐ¶ÏÊÇ·ñÓërectÏà½»£¬Ö»ÒªrectÊÇnormalµÄ¾ÍÐÐ£¬ÎÞËùÎ½empty
+		// ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½rectï¿½à½»ï¿½ï¿½Ö»Òªrectï¿½ï¿½normalï¿½Ä¾ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Î½empty
 		bool IntersectRectExt(const thisClass& rect)const
 		{
 			if (!IsRectNormal() || !rect.IsRectNormal())

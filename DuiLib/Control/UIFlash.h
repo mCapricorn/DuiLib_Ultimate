@@ -1,8 +1,8 @@
-#ifndef __UIFLASH_H__
+ï»¿#ifndef __UIFLASH_H__
 #define __UIFLASH_H__
 #pragma once
 
-// \Utils\Flash11.tlb ÎªFlash11½Ó¿ÚÎÄ¼þ£¬²¿·Ö·½·¨ÔÚµÍ°æ±¾²»´æÔÚ£¬Ê¹ÓÃÐè×¢Òâ
+// \Utils\Flash11.tlb ÎªFlash11ï¿½Ó¿ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ÚµÍ°æ±¾ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½
 // #import "PROGID:ShockwaveFlash.ShockwaveFlash"  \
 //      raw_interfaces_only,       /* Don't add raw_ to method names */ \
 //  	named_guids,           /* Named guids and declspecs */    \
@@ -17,7 +17,7 @@ namespace DuiLib
 {
 	class UILIB_API CFlashUI
 		: public CActiveXUI
-	//	, public IOleInPlaceSiteWindowless // Í¸Ã÷Ä£Ê½»æÍ¼£¬ÐèÒªÊµÏÖÕâ¸ö½Ó¿Ú
+	//	, public IOleInPlaceSiteWindowless // Í¸ï¿½ï¿½Ä£Ê½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ÒªÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
 		, public _IShockwaveFlashEvents
 		, public ITranslateAccelerator
 	{
@@ -52,7 +52,7 @@ namespace DuiLib
 		HRESULT RegisterEventHandler(BOOL inAdvise);
 
 		// ITranslateAccelerator
-		// DuilibÏûÏ¢·Ö·¢¸øWebBrowser
+		// Duilibï¿½ï¿½Ï¢ï¿½Ö·ï¿½ï¿½ï¿½WebBrowser
 		virtual LRESULT TranslateAccelerator( MSG *pMsg );
 
 	private:

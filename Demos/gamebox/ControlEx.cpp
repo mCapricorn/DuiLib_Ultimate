@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "ShortCutUI.h"
 #include "LabelEx.h"
 #include "GameItemUI.h"

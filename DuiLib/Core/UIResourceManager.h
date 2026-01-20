@@ -1,9 +1,9 @@
-#ifndef __UIRESOURCEMANAGER_H__
+ï»¿#ifndef __UIRESOURCEMANAGER_H__
 #define __UIRESOURCEMANAGER_H__
 #pragma once
 
 namespace DuiLib {
-	// ¿Ø¼þÎÄ×Ö²éÑ¯½Ó¿Ú
+	// ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Ñ¯ï¿½Ó¿ï¿½
 	class UILIB_API IQueryControlText
 	{
 	public:

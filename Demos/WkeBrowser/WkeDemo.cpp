@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include <exdisp.h>
 #include <comdef.h>
 #include "resource.h"
@@ -7,22 +7,22 @@
 
 void InitResource()
 {
-	// ×ÊÔ´ÀàÐÍ
+	// ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
 #ifdef _DEBUG
 	CPaintManagerUI::SetResourceType(UILIB_FILE);
 #else
 	CPaintManagerUI::SetResourceType(UILIB_ZIPRESOURCE);
 #endif
-	// ×ÊÔ´Â·¾¶
+	// ï¿½ï¿½Ô´Â·ï¿½ï¿½
 	CDuiString strResourcePath = CPaintManagerUI::GetInstancePath();
-	// ¼ÓÔØ×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 	switch(CPaintManagerUI::GetResourceType())
 	{
 	case UILIB_FILE:
 		{
 			strResourcePath += _T("Skin\\WkeBrowser\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -30,7 +30,7 @@ void InitResource()
 		{
 			strResourcePath += _T("Skin\\WkeBrowser\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("IDR_RES"), _T("xml"));
 			break;
 		}
@@ -39,7 +39,7 @@ void InitResource()
 			strResourcePath += _T("Skin\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
 			CPaintManagerUI::SetResourceZip(_T("WkeBrowser.zip"), true);
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -56,7 +56,7 @@ void InitResource()
 					dwSize = ::SizeofResource(CPaintManagerUI::GetResourceDll(), hResource);
 					if( dwSize > 0 ) {
 						CPaintManagerUI::SetResourceZip((LPBYTE)::LockResource(hGlobal), dwSize);
-						// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 					}
 				}
@@ -72,24 +72,24 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 	HRESULT Hr = ::CoInitialize(NULL);
 	if( FAILED(Hr) ) return 0;
 	HRESULT hRes = ::OleInitialize(NULL);
-	// ³õÊ¼»¯UI¹ÜÀíÆ÷
+	// ï¿½ï¿½Ê¼ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	CPaintManagerUI::SetInstance(hInstance);
-	// ³õÊ¼»¯×ÊÔ´
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ô´
 	InitResource();
-	// ¼ÓÔØ¿Ø¼þ
+	// ï¿½ï¿½ï¿½Ø¿Ø¼ï¿½
 #ifndef _DEBUG
 	CPaintManagerUI::LoadPlugin(_T("TroyControls.dll"));
 #else
 	CPaintManagerUI::LoadPlugin(_T("TroyControls_d.dll"));
 #endif
-	// ´´½¨Ö÷´°¿Ú
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	CMainWnd* pMainWnd = new CMainWnd();
 	if( pMainWnd == NULL ) return 0;
-	pMainWnd->Create(NULL, _T("WkeÊ¹ÓÃÀý×Ó£¨By Troy£©"), UI_WNDSTYLE_FRAME, 0L, 0, 0, 800, 572);
+	pMainWnd->Create(NULL, _T("WkeÊ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½By Troyï¿½ï¿½"), UI_WNDSTYLE_FRAME, 0L, 0, 0, 800, 572);
 	pMainWnd->CenterWindow();
-	// Æô¶¯ÏûÏ¢Ñ­»·
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Ñ­ï¿½ï¿½
 	CPaintManagerUI::MessageLoop();
-	// ÊÍ·Å×ÊÔ´
+	// ï¿½Í·ï¿½ï¿½ï¿½Ô´
 	CResourceManager::GetInstance()->Release();
 
 	OleUninitialize();

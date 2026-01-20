@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 class CFrameWnd: public WindowImplBase
 {
@@ -17,5 +17,5 @@ public:
 
 private:
 	CDuiString		m_strXMLPath;
-	CStdStringPtrMap m_MenuCheckInfo; //±£´æ²Ëµ¥µÄµ¥Ñ¡¸´Ñ¡ÐÅÏ¢
+	CStdStringPtrMap m_MenuCheckInfo; //ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Äµï¿½Ñ¡ï¿½ï¿½Ñ¡ï¿½ï¿½Ï¢
 };

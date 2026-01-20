@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 
 namespace DuiLib
 {
 #define MAX_FONT_ID		30000
 #define CARET_TIMERID	0x1999
 
-	// ÁÐ±íÀàÐÍ
+	// ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½
 	enum ListType
 	{
 		LT_LIST = 0,
@@ -14,7 +14,7 @@ namespace DuiLib
 		LT_MENU,
 	};
 
-	// Êó±ê¹â±ê¶¨Òå
+	// ï¿½ï¿½ï¿½ï¿½ê¶¨ï¿½ï¿½
 #define DUI_ARROW           32512
 #define DUI_IBEAM           32513
 #define DUI_WAIT            32514
@@ -30,7 +30,7 @@ namespace DuiLib
 #define DUI_NO              32648
 #define DUI_HAND            32649
 
-	// ÏûÏ¢ÀàÐÍ
+	// ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
 	enum DuiSig
 	{
 		DuiSig_end = 0, // [marks end of message map]
@@ -38,7 +38,7 @@ namespace DuiLib
 		DuiSig_vn,      // void (TNotifyUI)
 	};
 
-	// ºËÐÄ¿Ø¼þ
+	// ï¿½ï¿½ï¿½Ä¿Ø¼ï¿½
 	class CControlUI;
 
 	// Structure for notifications to the outside world
@@ -54,7 +54,7 @@ namespace DuiLib
 	} TNotifyUI;
 
 	class CNotifyPump;
-	typedef void (CNotifyPump::*DUI_PMSG)(TNotifyUI& msg);  //Ö¸ÕëÀàÐÍ
+	typedef void (CNotifyPump::*DUI_PMSG)(TNotifyUI& msg);  //Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	union DuiMessageMapFunctions
 	{
@@ -63,7 +63,7 @@ namespace DuiLib
 		void (CNotifyPump::*pfn_Notify_vn)(TNotifyUI&);
 	};
 
-	//¶¨ÒåËùÓÐÏûÏ¢ÀàÐÍ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
 	//////////////////////////////////////////////////////////////////////////
 
 #define DUI_MSGTYPE_MENU                   (_T("menu"))
@@ -134,16 +134,16 @@ namespace DuiLib
 		const DUI_MSGMAP_ENTRY* lpEntries;
 	};
 
-	//½á¹¹¶¨Òå
-	struct DUI_MSGMAP_ENTRY //¶¨ÒåÒ»¸ö½á¹¹Ìå£¬À´´æ·ÅÏûÏ¢ÐÅÏ¢
+	//ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½
+	struct DUI_MSGMAP_ENTRY //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½á¹¹ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ï¢
 	{
-		CDuiString sMsgType;          // DUIÏûÏ¢ÀàÐÍ
-		CDuiString sCtrlName;         // ¿Ø¼þÃû³Æ
-		UINT       nSig;              // ±ê¼Çº¯ÊýÖ¸ÕëÀàÐÍ
-		DUI_PMSG   pfn;               // Ö¸Ïòº¯ÊýµÄÖ¸Õë
+		CDuiString sMsgType;          // DUIï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
+		CDuiString sCtrlName;         // ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½
+		UINT       nSig;              // ï¿½ï¿½Çºï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		DUI_PMSG   pfn;               // Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 	};
 
-	//¶¨Òå
+	//ï¿½ï¿½ï¿½ï¿½
 #ifndef UILIB_STATIC
 #define DUI_DECLARE_MESSAGE_MAP()                                         \
 private:                                                                  \
@@ -164,7 +164,7 @@ protected:                                                                \
 #endif
 
 
-	//»ùÀàÉùÃ÷¿ªÊ¼
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼
 #ifndef UILIB_STATIC
 #define DUI_BASE_BEGIN_MESSAGE_MAP(theClass)                              \
 	const DUI_MSGMAP* PASCAL theClass::_GetBaseMessageMap()               \
@@ -188,7 +188,7 @@ protected:                                                                \
 #endif
 
 
-	//×ÓÀàÉùÃ÷¿ªÊ¼
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼
 #ifndef UILIB_STATIC
 #define DUI_BEGIN_MESSAGE_MAP(theClass, baseClass)                        \
 	const DUI_MSGMAP* PASCAL theClass::_GetBaseMessageMap()               \
@@ -212,54 +212,54 @@ protected:                                                                \
 #endif
 
 
-	//ÉùÃ÷½áÊø
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_END_MESSAGE_MAP()                                             \
 	{ _T(""), _T(""), DuiSig_end, (DUI_PMSG)0 }                           \
 	};                                                                        \
 
 
-	//¶¨ÒåÏûÏ¢ÀàÐÍ--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_MSGTYPE(msgtype, memberFxn)                                \
 	{ msgtype, _T(""), DuiSig_vn, (DUI_PMSG)&memberFxn},                  \
 
 
-	//¶¨ÒåÏûÏ¢ÀàÐÍ--¿Ø¼þÃû³Æ--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½--ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_MSGTYPE_CTRNAME(msgtype,ctrname,memberFxn)                 \
 	{ msgtype, ctrname, DuiSig_vn, (DUI_PMSG)&memberFxn },                \
 
 
-	//¶¨ÒåclickÏûÏ¢µÄ¿Ø¼þÃû³Æ--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½clickï¿½ï¿½Ï¢ï¿½Ä¿Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_CLICK_CTRNAME(ctrname,memberFxn)                           \
 	{ DUI_MSGTYPE_CLICK, ctrname, DuiSig_vn, (DUI_PMSG)&memberFxn },      \
 
 
-	//¶¨ÒåselectchangedÏûÏ¢µÄ¿Ø¼þÃû³Æ--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½selectchangedï¿½ï¿½Ï¢ï¿½Ä¿Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_SELECTCHANGED_CTRNAME(ctrname,memberFxn)                   \
 	{ DUI_MSGTYPE_SELECTCHANGED,ctrname,DuiSig_vn,(DUI_PMSG)&memberFxn }, \
 
 
-	//¶¨ÒåkillfocusÏûÏ¢µÄ¿Ø¼þÃû³Æ--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½killfocusï¿½ï¿½Ï¢ï¿½Ä¿Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_KILLFOCUS_CTRNAME(ctrname,memberFxn)                       \
 	{ DUI_MSGTYPE_KILLFOCUS,ctrname,DuiSig_vn,(DUI_PMSG)&memberFxn },     \
 
 
-	//¶¨ÒåmenuÏûÏ¢µÄ¿Ø¼þÃû³Æ--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½menuï¿½ï¿½Ï¢ï¿½Ä¿Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_MENU_CTRNAME(ctrname,memberFxn)                            \
 	{ DUI_MSGTYPE_MENU,ctrname,DuiSig_vn,(DUI_PMSG)&memberFxn },          \
 
 
-	//¶¨ÒåÓë¿Ø¼þÃû³ÆÎÞ¹ØµÄÏûÏ¢ºê
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¹Øµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
 
-	//¶¨ÒåtimerÏûÏ¢--Ö´ÐÐº¯Êýºê
+	//ï¿½ï¿½ï¿½ï¿½timerï¿½ï¿½Ï¢--Ö´ï¿½Ðºï¿½ï¿½ï¿½ï¿½ï¿½
 #define DUI_ON_TIMER()                                                    \
 	{ DUI_MSGTYPE_TIMER, _T(""), DuiSig_vn,(DUI_PMSG)&OnTimer },          \
 
 
 	///
-	//////////////ENDÏûÏ¢Ó³Éäºê¶¨Òå////////////////////////////////////////////////////
+	//////////////ENDï¿½ï¿½Ï¢Ó³ï¿½ï¿½ê¶¨ï¿½ï¿½////////////////////////////////////////////////////
 
 
-//////////////BEGIN¿Ø¼þÃû³Æºê¶¨Òå//////////////////////////////////////////////////
+//////////////BEGINï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Æºê¶¨ï¿½ï¿½//////////////////////////////////////////////////
 ///
 #define  DUI_CTR_BOX							 (_T("Box")) //
 
@@ -324,7 +324,7 @@ protected:                                                                \
 
 #define DUI_CTR_COLORPALETTE					  (_T("ColorPalette"))
 	///
-	//////////////END¿Ø¼þÃû³Æºê¶¨Òå//////////////////////////////////////////////////
+	//////////////ENDï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Æºê¶¨ï¿½ï¿½//////////////////////////////////////////////////
 
 	}// namespace DuiLib
 

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Graph_Matrix.h"
 namespace Graph
@@ -12,7 +12,7 @@ namespace Graph
 		~CView(){};
 
 	public:
-		// ³õÊ¼»¯¹Û²ì¾ØÕó(×óÊÖ×ø±êÏµ)
+		// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ)
 		void InitViewMatrix(Vector &eye, Vector &lookAt, Vector &up)
 		{						
 			//right vector

@@ -1,4 +1,4 @@
-// dllmain.cpp : ¶¨Òå DLL Ó¦ÓÃ³ÌÐòµÄÈë¿Úµã¡£
+ï»¿// dllmain.cpp : ï¿½ï¿½ï¿½ï¿½ DLL Ó¦ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµã¡£
 #include "StdAfx.h"
 
 BOOL APIENTRY DllMain( HMODULE hModule,

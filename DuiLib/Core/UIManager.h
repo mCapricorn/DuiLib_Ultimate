@@ -1,4 +1,4 @@
-#ifndef __UIMANAGER_H__
+ï»¿#ifndef __UIMANAGER_H__
 #define __UIMANAGER_H__
 
 #pragma once
@@ -14,10 +14,10 @@ namespace DuiLib {
 	//
 	enum UILIB_RESTYPE
 	{
-		UILIB_FILE=1,		// À´×Ô´ÅÅÌÎÄ¼þ
-		UILIB_ZIP,			// À´×Ô´ÅÅÌzipÑ¹Ëõ°ü
-		UILIB_RESOURCE,		// À´×Ô×ÊÔ´
-		UILIB_ZIPRESOURCE,	// À´×Ô×ÊÔ´µÄzipÑ¹Ëõ°ü
+		UILIB_FILE=1,		// ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+		UILIB_ZIP,			// ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½zipÑ¹ï¿½ï¿½ï¿½ï¿½
+		UILIB_RESOURCE,		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+		UILIB_ZIPRESOURCE,	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½zipÑ¹ï¿½ï¿½ï¿½ï¿½
 	};
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -57,13 +57,13 @@ namespace DuiLib {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-	// ÄÚ²¿±£ÁôµÄÏûÏ¢
+	// ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	typedef enum MSGTYPE_UI
 	{
-		UIMSG_TRAYICON = WM_USER + 1,// ÍÐÅÌÏûÏ¢
+		UIMSG_TRAYICON = WM_USER + 1,// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		UIMSG_SET_DPI,				 // DPI
-		WM_MENUCLICK,				 // ²Ëµ¥ÏûÏ¢
-		UIMSG_USER = WM_USER + 100,	 // ³ÌÐò×Ô¶¨ÒåÏûÏ¢
+		WM_MENUCLICK,				 // ï¿½Ëµï¿½ï¿½ï¿½Ï¢
+		UIMSG_USER = WM_USER + 100,	 // ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	};
 
 	/////////////////////////////////////////////////////////////////////////////////////
@@ -309,7 +309,7 @@ namespace DuiLib {
 
 		bool IsForceUseSharedRes() const;
 		void SetForceUseSharedRes(bool bForce);
-		// ×¢Òâ£ºÖ»Ö§³Ö¼òµ¥ÀàÐÍÖ¸Õë£¬ÒòÎªÖ»ÊÍ·ÅÄÚ´æ£¬²»»áµ÷ÓÃÀà¶ÔÏóµÄÎö¹¹º¯Êý
+		// ×¢ï¿½â£ºÖ»Ö§ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ë£¬ï¿½ï¿½ÎªÖ»ï¿½Í·ï¿½ï¿½Ú´æ£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void DeletePtr(void* ptr);
 
 		DWORD GetDefaultDisabledColor() const;
@@ -360,7 +360,7 @@ namespace DuiLib {
 		bool RemoveWindowCustomAttribute(LPCTSTR pstrName);
 		void RemoveAllWindowCustomAttribute();
 
-		// ÑùÊ½¹ÜÀí
+		// ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½
 		void AddStyle(LPCTSTR pName, LPCTSTR pStyle, bool bShared = false);
 		LPCTSTR GetStyle(LPCTSTR pName) const;
 		BOOL RemoveStyle(LPCTSTR pName, bool bShared = false);
@@ -369,7 +369,7 @@ namespace DuiLib {
 
 		const TImageInfo* GetImageString(LPCTSTR pStrImage, LPCTSTR pStrModify = NULL);
 
-		// ³õÊ¼»¯ÍÏ×§
+		// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½×§
 		bool EnableDragDrop(bool bEnable);
 		void SetDragDrop(IDragDropUI* pDragDrop);
 		virtual bool OnDrop(FORMATETC* pFmtEtc, STGMEDIUM& medium,DWORD *pdwEffect);
@@ -472,7 +472,7 @@ namespace DuiLib {
 
 	private:
 		CDuiString m_sName;
-		HWND m_hWndPaint;	//Ëù¸½¼ÓµÄ´°ÌåµÄ¾ä±ú
+		HWND m_hWndPaint;	//ï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄ´ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½
 		HDC m_hDcPaint;
 		HDC m_hDcOffscreen;
 		HDC m_hDcBackground;
@@ -481,7 +481,7 @@ namespace DuiLib {
 		HBITMAP m_hbmpBackground;
 		COLORREF* m_pBackgroundBits;
 
-		// ÌáÊ¾ÐÅÏ¢
+		// ï¿½ï¿½Ê¾ï¿½ï¿½Ï¢
 		HWND m_hwndTooltip;
 		TOOLINFO m_ToolTip;
 		int m_iHoverTime;
@@ -544,18 +544,18 @@ namespace DuiLib {
 		bool m_bForceUseSharedRes;
 		TResInfo m_ResInfo;
 		
-		// ´°¿ÚÒõÓ°
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°
 		CShadowUI m_shadow;
 		
-		// DPI¹ÜÀíÆ÷
+		// DPIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		CDPI* m_pDPI;
-		// ÊÇ·ñ¿ªÆôGdiplus
+		// ï¿½Ç·ï¿½ï¿½ï¿½Gdiplus
 		bool m_bUseGdiplusText;
 		int m_trh;
 		ULONG_PTR m_gdiplusToken;
 		Gdiplus::GdiplusStartupInput *m_pGdiplusStartupInput;
 
-		// ÍÏ×§
+		// ï¿½ï¿½×§
 		bool m_bDragDrop;
 		bool m_bDragMode;
 		HBITMAP m_hDragBitmap;

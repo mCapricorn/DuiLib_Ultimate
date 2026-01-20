@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "WkeWebkit.h"
 
 map<wkeWebView, CWkeWebkitUI*> CWkeWebkitUI::m_mapWke2UI;
@@ -139,13 +139,13 @@ LPVOID CWkeWebkitUI::GetInterface(LPCTSTR pstrName)
 void CWkeWebkitUI::DoInit()
 {
 	CControlUI::DoInit();
-	// ÉèÖÃUA
+	// ï¿½ï¿½ï¿½ï¿½UA
 	wkeSetUserAgent(m_pWebView, "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2228.0 Safari/537.36");
-	// ÉèÖÃÃû³Æ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	wkeSetName(m_pWebView, T2ANSI(GetName()).c_str());
-	// Æô¶¯¶¨Ê±Æ÷
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	SetTimer(EVENT_TICK_TIEMER_ID, 30);
-	// ³õÊ¼»¯ºó»Øµ÷½Ó¿Ú
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½Ó¿ï¿½
 	wkeOnTitleChanged(m_pWebView, OnWkeTitleChanged, this);
 	wkeOnURLChanged(m_pWebView, OnWkeURLChanged, this);
 	wkeOnNavigation(m_pWebView, OnWkeNavigation, this);
@@ -158,7 +158,7 @@ void CWkeWebkitUI::SetPos(RECT rc, bool bNeedUpdate/* = true*/)
 {	
 	m_RendData.rt = rc;
 	m_RendData.pixels = NULL;
-	// µ÷ÕûÎ»ÖÃºÍ³ß´ç
+	// ï¿½ï¿½ï¿½ï¿½Î»ï¿½ÃºÍ³ß´ï¿½
 	CControlUI::SetPos(rc, bNeedUpdate);
 	wkeResize(m_pWebView, rc.right - rc.left, rc.bottom - rc.top);	
 }
@@ -191,16 +191,16 @@ bool CWkeWebkitUI::DoPaint(HDC hDC, const RECT& rcPaint, CControlUI* pStopContro
 
 void CWkeWebkitUI::InitializeWebkit()
 {
-	// ³õÊ¼»¯
+	// ï¿½ï¿½Ê¼ï¿½ï¿½
 	wkeInitialize();
 
-	//°ó¶¨È«¾Öº¯Êý
+	//ï¿½ï¿½È«ï¿½Öºï¿½ï¿½ï¿½
 	jsBindFunction("jsToNative", JsToNative, 2);	
 }
 
 void CWkeWebkitUI::UninitializeWebkit()
 {
-	// ÇåÀí
+	// ï¿½ï¿½ï¿½ï¿½
 	wkeFinalize();
 }
 
@@ -440,7 +440,7 @@ void WKE_CALL CWkeWebkitUI::OnWkeLoadingFinish(wkeWebView webView, void* param, 
 	CWkeWebkitUI *pWkeUI = (CWkeWebkitUI*)param;
 	if(!pWkeUI)	return;
 
-	//Ò³Ãæ¼ÓÔØÊ§°Ü
+	//Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
 	if(result == WKE_LOADING_FAILED) {
 		pWkeUI->Navigate(pWkeUI->m_chErrUrl);
 	}
@@ -452,7 +452,7 @@ void WKE_CALL CWkeWebkitUI::OnWkeLoadingFinish(wkeWebView webView, void* param, 
 
 jsValue JS_CALL CWkeWebkitUI::JsToNative(jsExecState es)
 {
-	//²éÕÒUI¶ÔÏó
+	//ï¿½ï¿½ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½
 	CWkeWebkitUI *pWkeUI = NULL;
 	wkeWebView pWke = jsGetWebView(es);
 	if(pWke) {
@@ -467,7 +467,7 @@ jsValue JS_CALL CWkeWebkitUI::JsToNative(jsExecState es)
 			jsValue arg1 = jsArg(es, 0);
 			jsValue arg2 = jsArg(es, 1);
 			if(jsIsString(arg1) && jsIsString(arg2)) {
-				//ÐèÒª±£Ö¤Á½¸ö²ÎÊý¶¼Îª×Ö·û´®
+				//ï¿½ï¿½Òªï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½
 #ifdef _UNICODE 
 				wchar_t buf1[16*1024] = {0}, buf2[16*1024] = {0};
 				wcsncpy(buf1, jsToTempStringW(es, arg1), 16*1024-1);
@@ -482,7 +482,7 @@ jsValue JS_CALL CWkeWebkitUI::JsToNative(jsExecState es)
 				LPCTSTR lpArg2 = buf2;
 
 				if(wcscmp(lpArg1, L"refresh") == 0) {
-					//±¾µØË¢ÐÂ
+					//ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½
 					pWkeUI->Navigate(pWkeUI->m_chCurPageUrl);
 					return jsUndefined();
 				}

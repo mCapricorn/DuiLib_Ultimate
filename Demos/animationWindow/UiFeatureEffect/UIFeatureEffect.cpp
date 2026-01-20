@@ -1,4 +1,4 @@
-// UIEffect.cpp : Defines the exported functions for the DLL application.
+ï»¿// UIEffect.cpp : Defines the exported functions for the DLL application.
 //
 #include "StdAfx.h"
 #include <time.h>
@@ -6,14 +6,14 @@
 
 IUIEffect* GetAnimation(void)
 {
-	// ´´½¨¶ÔÏóÊµÀý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 	IUIEffect *pEffect =  dynamic_cast<IUIEffect*>(new CWndEffect());
 	return pEffect != NULL ? pEffect :NULL;
 }
 
 BOOL ReleaseAnimation(IUIEffect* &pUIEffect)
 {
-	// ÊÍ·Å£¬ÖÃ¿Õ
+	// ï¿½Í·Å£ï¿½ï¿½Ã¿ï¿½
 	CWndEffect* pWndEffect =  dynamic_cast<CWndEffect*>(pUIEffect);
 	delete pWndEffect;
 	pUIEffect = NULL;
@@ -28,14 +28,14 @@ DWORD GetSurportAnimationType(const char *& strAnimationType)
 
 IImageProcess* GetImageProcess(void)
 {
-	// ´´½¨¶ÔÏóÊµÀý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 	IImageProcess *pProcess =  dynamic_cast<IImageProcess*>(new CAlphaBlendImpl());
 	return pProcess != NULL ? pProcess : NULL;
 }
 
 BOOL ReleaseImageProcess(IImageProcess* &pProcess)
 {
-	// ÊÍ·Å£¬ÖÃ¿Õ
+	// ï¿½Í·Å£ï¿½ï¿½Ã¿ï¿½
 	IImageProcess* pImageProcess =  dynamic_cast<CAlphaBlendImpl*>(pProcess);
 	delete pImageProcess;
 	pImageProcess = NULL;
@@ -47,10 +47,10 @@ BOOL ReleaseImageProcess(IImageProcess* &pProcess)
 
 void ClearContainerData(InternalAnimationParam &pElem)
 {
-	// É¾³ý¿½±´µÄÄÚ´æ
+	// É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½
 	delete []pElem.bmpDataCopy;
 	pElem.bmpDataCopy = NULL;
-	// É¾³ýÌØÐ§Àà
+	// É¾ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
 	pElem.pEffect->ReleaseEffectParam();
 	delete dynamic_cast<CEffect*>(pElem.pEffect);
 	pElem.pEffect = NULL;
@@ -64,7 +64,7 @@ CWndEffect::CWndEffect()
 
 CWndEffect::~CWndEffect()
 {
-	// ÇåÀí×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 	for_each(m_animationContainer.begin(),m_animationContainer.end(),ClearContainerData);
 	m_animationContainer.clear();
 
@@ -148,7 +148,7 @@ BOOL CWndEffect::Animation(IUIEffectCallBack *iDrawEffect,DWORD frameSpin)
 	DWORD time_start = clock();;
 	DWORD delta_time = 0;
 
-	// ¶ÓÁÐ·Ç¿Õ£¬Ö´ÐÐ¶¯»­
+	// ï¿½ï¿½ï¿½Ð·Ç¿Õ£ï¿½Ö´ï¿½Ð¶ï¿½ï¿½ï¿½
 	while (m_animationContainer.size() != 0)
 	{
 		ComputeAnimation(iDrawEffect,delta_time);
@@ -167,21 +167,21 @@ BOOL CWndEffect::Animation(IUIEffectCallBack *iDrawEffect,DWORD frameSpin)
 
 void CWndEffect::ComputeAnimation(IUIEffectCallBack *iDrawEffect,DWORD timeElapse)
 {
-	// ´ËÑ­»·¹ý³ÌÖÐ²»ÄÜ²åÈë
+	// ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½Ü²ï¿½ï¿½ï¿½
 	for(m_itAnimation = m_animationContainer.begin();m_itAnimation != m_animationContainer.end(); m_itAnimation++)
 	{	
 		IEffect *pEffect = (IEffect *)m_itAnimation->pEffect;
 		if((!m_itAnimation->frameNow))
 		{
-			// µÚÒ»Ö¡
+			// ï¿½ï¿½Ò»Ö¡
 			m_itAnimation->frameNow++;
 			pEffect->ComputeOneFrame(&*m_itAnimation);
-			// Í¨Öª»æÖÆÄ£¿é
+			// Í¨Öªï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
 			iDrawEffect->OnUiEffectBegin(m_itAnimation->param.effectKey, m_itAnimation->param.animationEffect);
 		}
 		else if(timeElapse / m_itAnimation->param.animationFrequency >= m_itAnimation->frameNow)
 		{
-			// ·ûºÏÏÂÒ»Ö¡Ìõ¼þ£¬ÖØÐÂ¼ÆËã
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½
 			m_itAnimation->frameNow++;
 			pEffect->ComputeOneFrame(&*m_itAnimation);
 		}
@@ -191,7 +191,7 @@ void CWndEffect::ComputeAnimation(IUIEffectCallBack *iDrawEffect,DWORD timeElaps
 
 void CWndEffect::CleanFinishedAnimation(IUIEffectCallBack *iDrawEffect)
 {
-	// »æÖÆÍê³ÉºóÉ¾³ýÍê³ÉµÄ¶¯»­
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½É¾ï¿½ï¿½ï¿½ï¿½ÉµÄ¶ï¿½ï¿½ï¿½
 	int sizeVec = m_animationContainer.size();
 	for(int i = 0; i < sizeVec; i++)
 	{

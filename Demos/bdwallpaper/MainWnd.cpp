@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "MainWnd.h"
 #include <ShlObj.h>
 //////////////////////////////////////////////////////////////////////////
@@ -84,23 +84,23 @@ struct TABBTN
 };
 void CMainWnd::InitWindow()
 {
-	// ³õÊ¼»¯Êý¾Ý¹ÜÀíÆ÷
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½
 	m_Data.Init(m_hWnd);
-	// ´´½¨·ÖÀà°´Å¥
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à°´Å¥
 	CHorizontalLayoutUI* pTabBar = (CHorizontalLayoutUI*)m_pm.FindControl(_T("tabbar"));
 	if(pTabBar)
 	{
 		TABBTN aTypes[] = {
-			{_T("8009|1003|1004|1007|1002|1005|1006|1001|1008"), _T("¾«Ñ¡")},
-			{_T("1003"), _T("·ç¾°")},
-			{_T("1004"), _T("ÃÀÅ®")},
-			{_T("1007"), _T("Ð¡ÇåÐÂ")},
-			{_T("1002"), _T("¶¯Âþ")},
-			{_T("1005"), _T("ÃÈ³è")},
-			{_T("1006"), _T("Ã÷ÐÇ")},
-			{_T("1001"), _T("´´Òâ")},
-			{_T("1008"), _T("Æû³µ")},
-			{_T("8009"), _T("ÑÕÉ«")},
+			{_T("8009|1003|1004|1007|1002|1005|1006|1001|1008"), _T("ï¿½ï¿½Ñ¡")},
+			{_T("1003"), _T("ï¿½ç¾°")},
+			{_T("1004"), _T("ï¿½ï¿½Å®")},
+			{_T("1007"), _T("Ð¡ï¿½ï¿½ï¿½ï¿½")},
+			{_T("1002"), _T("ï¿½ï¿½ï¿½ï¿½")},
+			{_T("1005"), _T("ï¿½È³ï¿½")},
+			{_T("1006"), _T("ï¿½ï¿½ï¿½ï¿½")},
+			{_T("1001"), _T("ï¿½ï¿½ï¿½ï¿½")},
+			{_T("1008"), _T("ï¿½ï¿½ï¿½ï¿½")},
+			{_T("8009"), _T("ï¿½ï¿½É«")},
 		};
 		COptionUI* pFirst = NULL;
 		for(int i = 0; i < sizeof(aTypes) / sizeof(TABBTN); ++i)
@@ -170,7 +170,7 @@ void CMainWnd::Notify( TNotifyUI &msg )
 	}
 	else if(msg.sType.CompareNoCase(DUI_MSGTYPE_CLICK_WPFAV) == 0)
 	{
-		MessageBox(NULL, _T("ÊÕ²Ø³É¹¦"), _T("°Ù¶È±ÚÖ½ - ÌáÊ¾"), MB_OK);
+		MessageBox(NULL, _T("ï¿½Õ²Ø³É¹ï¿½"), _T("ï¿½Ù¶È±ï¿½Ö½ - ï¿½ï¿½Ê¾"), MB_OK);
 	}
 	else if(msg.sType.CompareNoCase(DUI_MSGTYPE_CLICK_WPSET) == 0)
 	{

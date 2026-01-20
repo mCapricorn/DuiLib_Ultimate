@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 #include <map>
 using namespace std;
@@ -19,9 +19,9 @@ std::string T2ANSI(LPCTSTR);
 
 typedef struct _rend_data
 {
-	RECT rt; //äÖÈ¾µÄ¾ØÐÎÇøÓò
-	void* pixels; //äÖÈ¾µÄÄÚ´æÊý¾Ý
-	HDC hDC; //ÄÚ´æÉè±¸
+	RECT rt; //ï¿½ï¿½È¾ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	void* pixels; //ï¿½ï¿½È¾ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½
+	HDC hDC; //ï¿½Ú´ï¿½ï¿½è±¸
 	HBITMAP hBitmap; //Î»Í¼
 
 	_rend_data()
@@ -73,54 +73,54 @@ protected:
 	virtual void DoEvent(TEventUI& event);	
 
 public:
-	//³õÊ¼»¯webkit
+	//ï¿½ï¿½Ê¼ï¿½ï¿½webkit
 	static void InitializeWebkit();
 
-	//·´³õÊ¼»¯webkit
+	//ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½webkit
 	static void UninitializeWebkit();	
 
-	//Ö´ÐÐjs´úÂë
+	//Ö´ï¿½ï¿½jsï¿½ï¿½ï¿½ï¿½
 	void ExecuteJS(LPCTSTR lpJS);
 
 public:
 	wkeWebView GetWebView();
 
-	//¼ÓÔØurl
+	//ï¿½ï¿½ï¿½ï¿½url
 	void Navigate(LPCTSTR lpUrl);	
 
-	//¼ÓÔØhtml´úÂë
+	//ï¿½ï¿½ï¿½ï¿½htmlï¿½ï¿½ï¿½ï¿½
 	void LoadHtml(LPCTSTR lpHtml);
 
-	//¹Ø±Õwebkit´°¿Ú
+	//ï¿½Ø±ï¿½webkitï¿½ï¿½ï¿½ï¿½
 	void Close();	
 	
-	//Ò³Ãæ²Ù×÷£ººóÍË¡¢Ç°½ø¡¢Í£Ö¹¡¢Ë¢ÐÂ
+	//Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½Ë¢ï¿½ï¿½
 	void Back();
 	void Forward();
 	void Stop();
 	void Reload();	
 
-	//ÉèÖÃÖ÷Ò³
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³
 	void SetHomePage(LPCTSTR lpHomeUrl);
 
-	//ä¯ÀÀÖ÷Ò³
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ò³
 	void NavigateHomePage();
 
-	//ÉèÖÃÒ³Ãæ½¹µã
+	//ï¿½ï¿½ï¿½ï¿½Ò³ï¿½æ½¹ï¿½ï¿½
 	void SetPageFocus();
 
 public:
-	//ÉèÖÃ¼àÌý¶ÔÏó
+	//ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	void SetListenObj(void *pListenObj);
 
-	// ÉèÖÃ»Øµ÷½Ó¿Ú
+	// ï¿½ï¿½ï¿½Ã»Øµï¿½ï¿½Ó¿ï¿½
 	void SetWkeCallback(IWkeCallback* pWkeCallback);
 
-	//ÉèÖÃÒòÍøÂçÔ­Òòµ¼ÖÂÒ³Ãæ¼ÓÔØÊ§°ÜºóµÄÌáÊ¾Ò³Ãæ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Üºï¿½ï¿½ï¿½ï¿½Ê¾Ò³ï¿½ï¿½
 	void SetErrorInfoPageUrl(LPCTSTR lpErrUrl);
 
 private:
-	// »Øµ÷ÊÂ¼þ
+	// ï¿½Øµï¿½ï¿½Â¼ï¿½
 	static void WKE_CALL OnWkeTitleChanged(wkeWebView webView, void* param, wkeString title);
 	static void WKE_CALL OnWkeURLChanged(wkeWebView webView, void* param, wkeString url);
 	static void WKE_CALL OnWkeAlertBox(wkeWebView webView, void* param, wkeString msg);
@@ -128,7 +128,7 @@ private:
 	static wkeWebView WKE_CALL OnWkeCreateView(wkeWebView webView, void* param, const wkeNewViewInfo* info);
 	static void WKE_CALL OnWkeDocumentReady(wkeWebView webView, void* param, const wkeDocumentReadyInfo* info);
 	static void WKE_CALL OnWkeLoadingFinish(wkeWebView webView, void* param, const wkeString url, wkeLoadingResult result, const wkeString failedReason);
-	//ÄÚÖÃÒ»¸öjsÓë±¾µØµÄº¯ÊýÓ³Éä
+	//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½jsï¿½ë±¾ï¿½ØµÄºï¿½ï¿½ï¿½Ó³ï¿½ï¿½
 	static jsValue JS_CALL JsToNative(jsExecState es);
 
 private:
@@ -136,15 +136,15 @@ private:
 
 	wkeWebView	 m_pWebView;
 
-	TCHAR m_chHomeUrl[1024]; //Ö÷Ò³µÄurl
+	TCHAR m_chHomeUrl[1024]; //ï¿½ï¿½Ò³ï¿½ï¿½url
 
-	TCHAR m_chCurPageUrl[1024]; //µ±Ç°Ò³ÃæµÄurl
+	TCHAR m_chCurPageUrl[1024]; //ï¿½ï¿½Ç°Ò³ï¿½ï¿½ï¿½url
 
-	TCHAR m_chErrUrl[1024]; //´íÎóÌáÊ¾Ò³ÃæµÄurl
+	TCHAR m_chErrUrl[1024]; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ò³ï¿½ï¿½ï¿½url
 
 private:
-	void *m_pListenObj; //¼àÌý¶ÔÏó
-	IWkeCallback* m_pWkeCallback;	// »Øµ÷½Ó¿Ú
-	static map<wkeWebView, CWkeWebkitUI*> m_mapWke2UI; //½¨Á¢WkeºËÐÄµ½WebkitUIµÄÓ³Éä¹ØÏµ
+	void *m_pListenObj; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	IWkeCallback* m_pWkeCallback;	// ï¿½Øµï¿½ï¿½Ó¿ï¿½
+	static map<wkeWebView, CWkeWebkitUI*> m_mapWke2UI; //ï¿½ï¿½ï¿½ï¿½Wkeï¿½ï¿½ï¿½Äµï¿½WebkitUIï¿½ï¿½Ó³ï¿½ï¿½ï¿½Ïµ
 };
 

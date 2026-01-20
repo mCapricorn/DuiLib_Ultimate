@@ -1,25 +1,25 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "resource.h"
 #include "MainWnd.h"
 
 void InitResource()
 {	
-	// ×ÊÔ´ÀàÐÍ
+	// ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
 #ifdef _DEBUG
 	CPaintManagerUI::SetResourceType(UILIB_FILE);
 #else
 	CPaintManagerUI::SetResourceType(UILIB_ZIPRESOURCE);
 #endif
-	// ×ÊÔ´Â·¾¶
+	// ï¿½ï¿½Ô´Â·ï¿½ï¿½
 	CDuiString strResourcePath = CPaintManagerUI::GetInstancePath();
-	// ¼ÓÔØ×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 	switch(CPaintManagerUI::GetResourceType())
 	{
 	case UILIB_FILE:
 		{
 			strResourcePath += _T("skin\\transwnd\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -27,7 +27,7 @@ void InitResource()
 		{
 			strResourcePath += _T("skin\\transwnd\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("IDR_RES"), _T("xml"));
 			break;
 		}
@@ -36,7 +36,7 @@ void InitResource()
 			strResourcePath += _T("skin\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
 			CPaintManagerUI::SetResourceZip(_T("transwnd.zip"), true);
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -53,7 +53,7 @@ void InitResource()
 					dwSize = ::SizeofResource(CPaintManagerUI::GetResourceDll(), hResource);
 					if( dwSize > 0 ) {
 						CPaintManagerUI::SetResourceZip((LPBYTE)::LockResource(hGlobal), dwSize);
-						// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 					}
 				}
@@ -68,9 +68,9 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 {
 	HRESULT Hr = ::CoInitialize(NULL);
 	if( FAILED(Hr) ) return 0;
-	// ³õÊ¼»¯UI¹ÜÀíÆ÷
+	// ï¿½ï¿½Ê¼ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	CPaintManagerUI::SetInstance(hInstance);
-	// ³õÊ¼»¯×ÊÔ´
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ô´
 	InitResource();
 
 	CMainWnd* pFrame = new CMainWnd();

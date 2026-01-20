@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "UIVerticalLayout.h"
 
 namespace DuiLib
@@ -103,7 +103,7 @@ namespace DuiLib
 			iPosY -= m_pVerticalScrollBar->GetScrollPos();
 		}
 		else {
-			// ×Ó¿Ø¼þ´¹Ö±¶ÔÆä·½Ê½
+			// ï¿½Ó¿Ø¼ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ä·½Ê½
 			if(nAdjustables <= 0) {
 				UINT iChildAlign = GetChildVAlign(); 
 				if (iChildAlign == DT_VCENTER) {

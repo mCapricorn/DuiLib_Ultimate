@@ -1,4 +1,4 @@
-// MainWnd.h
+﻿// MainWnd.h
 
 #pragma once
 

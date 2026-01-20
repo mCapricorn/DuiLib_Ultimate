@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Graph
 {
@@ -21,7 +21,7 @@ namespace Graph
 	const real dConst_Rect_MaxLen=40000.0f;
 	const real dConst_Rect_MinLen=0.01f;
 
-	// Ïß¶ÎÏà»¥¹ØÏµ
+	// ï¿½ß¶ï¿½ï¿½à»¥ï¿½ï¿½Ïµ
 	#define INTERSECTLINE_NORMAL 0
 	#define INTERSECTLINE_NONE   1
 	#define INTERSECTLINE_COVER  2

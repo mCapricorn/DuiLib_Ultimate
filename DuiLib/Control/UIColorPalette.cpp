@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include <math.h>
 
 namespace DuiLib {
@@ -179,7 +179,7 @@ namespace DuiLib {
 	void CColorPaletteUI::SetBarHeight(int nHeight)
 	{
 		if (nHeight>150) {
-			nHeight = 150; //ÏÞÖÆ×î´ó¸ß¶È£¬ÓÉÓÚµ±Ç°Éè¼Æ£¬nheight³¬³ö190£¬³ÌÐò»áÒòÔ½½ç·ÃÎÊ±ÀÀ£
+			nHeight = 150; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¶È£ï¿½ï¿½ï¿½ï¿½Úµï¿½Ç°ï¿½ï¿½Æ£ï¿½nheightï¿½ï¿½ï¿½ï¿½190ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½
 		}
 		m_nBarHeight = nHeight;
 	}
@@ -347,7 +347,7 @@ namespace DuiLib {
 		int nSaveDC = ::SaveDC(hDC);
 
 		::SetStretchBltMode(hDC, HALFTONE);
-		//À­ÉìÄ£Ê½½«ÄÚ´æÍ¼»­µ½¿Ø¼þÉÏ
+		//ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½Ú´ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½
 		StretchBlt(hDC, m_rcItem.left, m_rcItem.top, m_rcItem.right - m_rcItem.left, m_nPalletHeight, m_MemDc, 0, 1, 360, 200, SRCCOPY);
 		StretchBlt(hDC, m_rcItem.left, m_rcItem.bottom - m_nBarHeight, m_rcItem.right - m_rcItem.left, m_nBarHeight, m_MemDc, 0, 210, 200, m_nBarHeight, SRCCOPY);
 
@@ -387,7 +387,7 @@ namespace DuiLib {
 		int x, y;
 		BYTE *pPiexl;
 		DWORD dwColor;
-		//ÕâÀï»­³öBar
+		//ï¿½ï¿½ï¿½ï»­ï¿½ï¿½Bar
 		for (y = 0; y < m_nBarHeight; ++y) {
 			for (x = 0; x < 200; ++x) {
 				pPiexl = LPBYTE(m_pBits) + ((210 + y)*m_bmInfo.bmWidthBytes) + ((x*m_bmInfo.bmBitsPixel) / 8);

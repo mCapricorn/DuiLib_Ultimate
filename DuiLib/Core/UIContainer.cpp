@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 
 namespace DuiLib
 {
@@ -258,15 +258,15 @@ namespace DuiLib
 		}
 	}
 
-	// Âß¼­ÉÏ£¬¶ÔÓÚContainer¿Ø¼þ²»¹«¿ª´Ë·½·¨
-	// µ÷ÓÃ´Ë·½·¨µÄ½á¹ûÊÇ£¬ÄÚ²¿×Ó¿Ø¼þÒþ²Ø£¬¿Ø¼þ±¾ÉíÒÀÈ»ÏÔÊ¾£¬±³¾°µÈÐ§¹û´æÔÚ
+	// ï¿½ß¼ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½Containerï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½
+	// ï¿½ï¿½ï¿½Ã´Ë·ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½Ú²ï¿½ï¿½Ó¿Ø¼ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	void CContainerUI::SetInternVisible(bool bVisible)
 	{
 		CControlUI::SetInternVisible(bVisible);
 		if( m_items.IsEmpty() ) return;
 		for( int it = 0; it < m_items.GetSize(); it++ ) {
-			// ¿ØÖÆ×Ó¿Ø¼þÏÔÊ¾×´Ì¬
-			// InternVisible×´Ì¬Ó¦ÓÉ×Ó¿Ø¼þ×Ô¼º¿ØÖÆ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ø¼ï¿½ï¿½ï¿½Ê¾×´Ì¬
+			// InternVisible×´Ì¬Ó¦ï¿½ï¿½ï¿½Ó¿Ø¼ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½
 			static_cast<CControlUI*>(m_items[it])->SetInternVisible(IsVisible());
 		}
 	}
@@ -437,7 +437,7 @@ namespace DuiLib
 
 		if(m_pVerticalScrollBar)
 		{
-			// ·¢ËÍ¹ö¶¯ÏûÏ¢
+			// ï¿½ï¿½ï¿½Í¹ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 			if( m_pManager != NULL && bMsg ) {
 				int nPage = (m_pVerticalScrollBar->GetScrollPos() + m_pVerticalScrollBar->GetLineSize()) / m_pVerticalScrollBar->GetLineSize();
 				m_pManager->SendNotify(this, DUI_MSGTYPE_SCROLL, (WPARAM)nPage);
@@ -938,7 +938,7 @@ namespace DuiLib
 
 	void CContainerUI::SetFloatPos(int iIndex)
 	{
-		// ÒòÎªCControlUI::SetPos¶ÔfloatµÄ²Ù×÷Ó°Ïì£¬ÕâÀï²»ÄÜ¶Ôfloat×é¼þÌí¼Ó¹ö¶¯ÌõµÄÓ°Ïì
+		// ï¿½ï¿½ÎªCControlUI::SetPosï¿½ï¿½floatï¿½Ä²ï¿½ï¿½ï¿½Ó°ï¿½ì£¬ï¿½ï¿½ï¿½ï²»ï¿½Ü¶ï¿½floatï¿½ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½
 		if( iIndex < 0 || iIndex >= m_items.GetSize() ) return;
 
 		CControlUI* pControl = static_cast<CControlUI*>(m_items[iIndex]);

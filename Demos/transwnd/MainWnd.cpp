@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "MainWnd.h"
 
 #include <ShellAPI.h>
@@ -73,7 +73,7 @@ void CMainWnd::OnItemSelect( TNotifyUI &msg )
 
 LRESULT CMainWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
  {
-	 // ¹Ø±Õ´°¿Ú£¬ÍË³ö³ÌÐò
+	 // ï¿½Ø±Õ´ï¿½ï¿½Ú£ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½
 	 if(uMsg == WM_DESTROY)
 	 {
 		 ::PostQuitMessage(0L);
@@ -91,7 +91,7 @@ void CMainWnd::Notify( TNotifyUI &msg )
 
 LRESULT CMainWnd::OnSysCommand( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 {
-	// ÓÐÊ±»áÔÚÊÕµ½WM_NCDESTROYºóÊÕµ½wParamÎªSC_CLOSEµÄWM_SYSCOMMAND
+	// ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½WM_NCDESTROYï¿½ï¿½ï¿½Õµï¿½wParamÎªSC_CLOSEï¿½ï¿½WM_SYSCOMMAND
 	if( wParam == SC_CLOSE ) {
 		::PostQuitMessage(0L);
 		bHandled = TRUE;

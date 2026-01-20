@@ -1,4 +1,4 @@
-
+ï»¿
 #pragma once
 #include "..\UiFeatureEffect\Interface\IUIEffect.h"
 
@@ -10,9 +10,9 @@ public:
 
 	static IUiEffectManagerImpl* GetInstance();
 
-	// µÃµ½Ò»¸ö¶¯»­¶ÔÏó
+	// ï¿½Ãµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	IUIEffect* GetAnimation();
-	// É¾³ýÒ»¸ö¶¯»­¶ÔÏó
+	// É¾ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	bool ReleaseAnimation(IUIEffect* &pUIEffect);
 	DWORD GetSurportAnimationType(const char* &strType);
 

@@ -1,4 +1,4 @@
-#ifndef __UIMENU_H__
+ï»¿#ifndef __UIMENU_H__
 #define __UIMENU_H__
 
 #pragma once
@@ -39,19 +39,19 @@ enum MenuAlignment
 
 enum MenuItemDefaultInfo
 {
-	ITEM_DEFAULT_HEIGHT = 30,		//Ã¿Ò»¸öitemµÄÄ¬ÈÏ¸ß¶È£¨Ö»ÔÚÊú×´ÅÅÁÐÊ±×Ô¶¨Òå£©
-	ITEM_DEFAULT_WIDTH = 150,		//´°¿ÚµÄÄ¬ÈÏ¿í¶È
+	ITEM_DEFAULT_HEIGHT = 30,		//Ã¿Ò»ï¿½ï¿½itemï¿½ï¿½Ä¬ï¿½Ï¸ß¶È£ï¿½Ö»ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ô¶ï¿½ï¿½å£©
+	ITEM_DEFAULT_WIDTH = 150,		//ï¿½ï¿½ï¿½Úµï¿½Ä¬ï¿½Ï¿ï¿½ï¿½
 
-	ITEM_DEFAULT_ICON_WIDTH = 26,	//Ä¬ÈÏÍ¼±êËùÕ¼¿í¶È
-	ITEM_DEFAULT_ICON_SIZE = 16,	//Ä¬ÈÏÍ¼±êµÄ´óÐ¡
+	ITEM_DEFAULT_ICON_WIDTH = 26,	//Ä¬ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½
+	ITEM_DEFAULT_ICON_SIZE = 16,	//Ä¬ï¿½ï¿½Í¼ï¿½ï¿½Ä´ï¿½Ð¡
 
-	ITEM_DEFAULT_EXPLAND_ICON_WIDTH = 20,	//Ä¬ÈÏÏÂ¼¶²Ëµ¥À©Õ¹Í¼±êËùÕ¼¿í¶È
-	ITEM_DEFAULT_EXPLAND_ICON_SIZE = 9,		//Ä¬ÈÏÏÂ¼¶²Ëµ¥À©Õ¹Í¼±êµÄ´óÐ¡
+	ITEM_DEFAULT_EXPLAND_ICON_WIDTH = 20,	//Ä¬ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ëµï¿½ï¿½ï¿½Õ¹Í¼ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½
+	ITEM_DEFAULT_EXPLAND_ICON_SIZE = 9,		//Ä¬ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ëµï¿½ï¿½ï¿½Õ¹Í¼ï¿½ï¿½Ä´ï¿½Ð¡
 
-	DEFAULT_LINE_LEFT_INSET = ITEM_DEFAULT_ICON_WIDTH + 3,	//Ä¬ÈÏ·Ö¸ôÏßµÄ×ó±ß¾à
-	DEFAULT_LINE_RIGHT_INSET = 7,	//Ä¬ÈÏ·Ö¸ôÏßµÄÓÒ±ß¾à
-	DEFAULT_LINE_HEIGHT = 6,		//Ä¬ÈÏ·Ö¸ôÏßËùÕ¼¸ß¶È
-	DEFAULT_LINE_COLOR = 0xFFBCBFC4	//Ä¬ÈÏ·Ö¸ôÏßÑÕÉ«
+	DEFAULT_LINE_LEFT_INSET = ITEM_DEFAULT_ICON_WIDTH + 3,	//Ä¬ï¿½Ï·Ö¸ï¿½ï¿½ßµï¿½ï¿½ï¿½ß¾ï¿½
+	DEFAULT_LINE_RIGHT_INSET = 7,	//Ä¬ï¿½Ï·Ö¸ï¿½ï¿½ßµï¿½ï¿½Ò±ß¾ï¿½
+	DEFAULT_LINE_HEIGHT = 6,		//Ä¬ï¿½Ï·Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ß¶ï¿½
+	DEFAULT_LINE_COLOR = 0xFFBCBFC4	//Ä¬ï¿½Ï·Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½É«
 
 };
 
@@ -291,12 +291,12 @@ public:
 	void Close(UINT nRet = IDOK);
 	bool isClosing;
 	/*
-	 *	@pOwner Ò»¼¶²Ëµ¥²»ÒªÖ¸¶¨Õâ¸ö²ÎÊý£¬ÕâÊÇ²Ëµ¥ÄÚ²¿Ê¹ÓÃµÄ
-	 *	@xml	²Ëµ¥µÄ²¼¾ÖÎÄ¼þ
-	 *	@point	²Ëµ¥µÄ×óÉÏ½Ç×ø±ê
-	 *	@pMainPaintManager	²Ëµ¥µÄ¸¸´°Ìå¹ÜÀíÆ÷Ö¸Õë
-	 *	@pMenuCheckInfo	±£´æ²Ëµ¥µÄµ¥Ñ¡ºÍ¸´Ñ¡ÐÅÏ¢½á¹¹Ö¸Õë
-	 *	@dwAlignment		²Ëµ¥µÄ³öÏÖÎ»ÖÃ£¬Ä¬ÈÏ³öÏÖÔÚÊó±êµÄÓÒÏÂ²à¡£
+	 *	@pOwner Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ÒªÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²Ëµï¿½ï¿½Ú²ï¿½Ê¹ï¿½Ãµï¿½
+	 *	@xml	ï¿½Ëµï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+	 *	@point	ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 *	@pMainPaintManager	ï¿½Ëµï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+	 *	@pMenuCheckInfo	ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Äµï¿½Ñ¡ï¿½Í¸ï¿½Ñ¡ï¿½ï¿½Ï¢ï¿½á¹¹Ö¸ï¿½ï¿½
+	 *	@dwAlignment		ï¿½Ëµï¿½ï¿½Ä³ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½Ä¬ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â²à¡£
 	 */
 
     void Init(CMenuElementUI* pOwner, STRINGorID xml, POINT point,
@@ -314,13 +314,13 @@ public:
 
 	BOOL Receive(ContextMenuParam param);
 
-	// »ñÈ¡¸ù²Ëµ¥¿Ø¼þ£¬ÓÃÓÚ¶¯Ì¬Ìí¼Ó×Ó²Ëµ¥
+	// ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ëµï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½Ó²Ëµï¿½
 	CMenuUI* GetMenuUI();
 
-	// ÖØÐÂµ÷Õû²Ëµ¥µÄ´óÐ¡
+	// ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Ä´ï¿½Ð¡
 	void ResizeMenu();
 
-	// ÖØÐÂµ÷Õû×Ó²Ëµ¥µÄ´óÐ¡
+	// ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½Ó²Ëµï¿½ï¿½Ä´ï¿½Ð¡
 	void ResizeSubMenu();
 	void setDPI(int DPI);
 
@@ -331,7 +331,7 @@ public:
     CPaintManagerUI m_pm;
     CMenuElementUI* m_pOwner;
     CMenuUI*	m_pLayout;
-	DWORD		m_dwAlignment;	//²Ëµ¥¶ÔÆë·½Ê½
+	DWORD		m_dwAlignment;	//ï¿½Ëµï¿½ï¿½ï¿½ï¿½ë·½Ê½
 };
 
 class CListContainerElementUI;
@@ -378,11 +378,11 @@ public:
 protected:
 	CMenuWnd*	m_pWindow;
 
-	bool		m_bDrawLine;	//»­·Ö¸ôÏß
-	DWORD		m_dwLineColor;  //·Ö¸ôÏßÑÕÉ«
-	RECT		m_rcLinePadding;	//·Ö¸îÏßµÄ×óÓÒ±ß¾à
+	bool		m_bDrawLine;	//ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½
+	DWORD		m_dwLineColor;  //ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	RECT		m_rcLinePadding;	//ï¿½Ö¸ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½Ò±ß¾ï¿½
 
-	SIZE		m_szIconSize; 	//»­Í¼±ê
+	SIZE		m_szIconSize; 	//ï¿½ï¿½Í¼ï¿½ï¿½
 	CDuiString	m_strIcon;
 	bool		m_bCheckItem;
 

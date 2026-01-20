@@ -1,4 +1,4 @@
-// StdAfx.h : include file for standard system include files,
+ï»¿// StdAfx.h : include file for standard system include files,
 //  or project specific include files that are used frequently, but
 //      are changed infrequently
 //
@@ -9,7 +9,7 @@
 #pragma once
 
 #ifdef __GNUC__
-// ÔõÃ´¶¼Ã»ÕÒµ½min£¬maxµÄÍ·ÎÄ¼þ-_-
+// ï¿½ï¿½Ã´ï¿½ï¿½Ã»ï¿½Òµï¿½minï¿½ï¿½maxï¿½ï¿½Í·ï¿½Ä¼ï¿½-_-
 #ifndef min
 #define min(a,b) (((a) < (b)) ? (a) : (b))
 #endif
@@ -52,7 +52,7 @@
 #define _WIN32_WINNT _WIN32_WINNT_WINXP//0x0501
 #endif
 
-//#define USE_XIMAGE_EFFECT //Ê¹ÓÃximageµÄgif¿Ø¼þCGifAnimExUI¿ª¹Ø£¬ÌáÉýÐÔÄÜ,Ä¬ÈÏ²»Ê¹ÓÃ
+//#define USE_XIMAGE_EFFECT //Ê¹ï¿½ï¿½ximageï¿½ï¿½gifï¿½Ø¼ï¿½CGifAnimExUIï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ä¬ï¿½Ï²ï¿½Ê¹ï¿½ï¿½
 
 #include "UIlib.h"
 

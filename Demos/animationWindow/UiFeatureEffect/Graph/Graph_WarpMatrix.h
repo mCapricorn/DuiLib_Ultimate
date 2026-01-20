@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <vector>
 #include "graph_Rect.h"
@@ -48,7 +48,7 @@ namespace Graph
 		}
 
 	public:
-		// ÅÐ¶ÏÊÇ·ñÊÇÍ¹ËÄ±ßÐÎ
+		// ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¹ï¿½Ä±ï¿½ï¿½ï¿½
 		bool IsConvexRect()const
 		{
 			CdLine line12(topLeft, topRight);
@@ -70,7 +70,7 @@ namespace Graph
 			return true;
 		}
 		
-		// ÅÐ¶ÏÊÇ·ñÊÇ°¼ËÄ±ßÐÎ
+		// ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ç°ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
 		bool IsSunkenRect()const
 		{
 			CdLine line12(topLeft, topRight);
@@ -318,7 +318,7 @@ namespace Graph
 		
 	public:
 		
-		// ³õÊ¼»¯Å¤Çú»·¾³£¬½«Ò»¸ö¾ØÐÎ¿òÓ³Éäµ½Ò»¸öÍ¹ËÄ±ßÐÎÖÐ
+		// ï¿½ï¿½Ê¼ï¿½ï¿½Å¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½Ó³ï¿½äµ½Ò»ï¿½ï¿½Í¹ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		bool InitMatrix(const WarpRect& _warpRect, const CdRect& _rectSrc)
 		{
@@ -651,7 +651,7 @@ namespace Graph
 			}
 		}
 	 
-		//º¯Êý½éÉÜ£ºÇóÄæ¾ØÕó£¨¸ßË¹¡ªÔ¼µ±·¨£© 
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¨¸ï¿½Ë¹ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 		BOOL InverseMatrix(const int &row)
 		{
 			real *m=new real[row*row];
@@ -663,8 +663,8 @@ namespace Graph
 			for (k=0;k<row;k++)
 			{
 				real max=0;
-				//È«Ñ¡Ö÷Ôª
-				//Ñ°ÕÒ×î´óÔªËØ
+				//È«Ñ¡ï¿½ï¿½Ôª
+				//Ñ°ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 				for (i=k;i<row;i++)
 				{
 					for (j=k;j<row;j++)
@@ -683,7 +683,7 @@ namespace Graph
 					return FALSE;
 				}
 
-				//ÐÐ½»»»
+				//ï¿½Ð½ï¿½ï¿½ï¿½
 				if (is[k]!=k)
 				{
 					for (i=0;i<row;i++)
@@ -692,7 +692,7 @@ namespace Graph
 					}
 				}
 
-				//ÁÐ½»»»
+				//ï¿½Ð½ï¿½ï¿½ï¿½
 				if (js[k]!=k)
 				{
 					for (i=0;i<row;i++)
@@ -735,7 +735,7 @@ namespace Graph
 			}
 
 			int r;
-			//»Ö¸´
+			//ï¿½Ö¸ï¿½
 			for (r=row-1;r>=0;r--)
 			{
 				if (js[r]!=r)

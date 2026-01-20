@@ -1,4 +1,4 @@
-#ifndef __UIWEBBROWSER_H__
+ï»¿#ifndef __UIWEBBROWSER_H__
 #define __UIWEBBROWSER_H__
 
 #pragma once
@@ -20,7 +20,7 @@ namespace DuiLib
 	{
 		DECLARE_DUICONTROL(CWebBrowserUI)
 	public:
-		/// ¹¹Ôìº¯Êý
+		/// ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 		CWebBrowserUI();
 		virtual ~CWebBrowserUI();
 
@@ -47,16 +47,16 @@ namespace DuiLib
 		static HRESULT SetProperty(IDispatch *pObj, LPOLESTR pName, VARIANT *pValue);
 
 	protected:
-		IWebBrowser2*			m_pWebBrowser2; //ä¯ÀÀÆ÷Ö¸Õë
+		IWebBrowser2*			m_pWebBrowser2; //ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 		IHTMLWindow2*		_pHtmlWnd2;
 		LONG m_dwRef;
 		DWORD m_dwCookie;
 		virtual void ReleaseControl();
 		HRESULT RegisterEventHandler(BOOL inAdvise);
 		virtual void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
-		CDuiString m_sHomePage;	// Ä¬ÈÏÒ³Ãæ
-		bool m_bAutoNavi;	// ÊÇ·ñÆô¶¯Ê±´ò¿ªÄ¬ÈÏÒ³Ãæ
-		CWebBrowserEventHandler* m_pWebBrowserEventHandler;	//ä¯ÀÀÆ÷ÊÂ¼þ´¦Àí
+		CDuiString m_sHomePage;	// Ä¬ï¿½ï¿½Ò³ï¿½ï¿½
+		bool m_bAutoNavi;	// ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ä¬ï¿½ï¿½Ò³ï¿½ï¿½
+		CWebBrowserEventHandler* m_pWebBrowserEventHandler;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		// DWebBrowserEvents2
 		void BeforeNavigate2( IDispatch *pDisp,VARIANT *&url,VARIANT *&Flags,VARIANT *&TargetFrameName,VARIANT *&PostData,VARIANT *&Headers,VARIANT_BOOL *&Cancel );
@@ -93,7 +93,7 @@ namespace DuiLib
 		STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 		STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 		STDMETHOD(ResizeBorder)(LPCRECT prcBorder, IOleInPlaceUIWindow* pUIWindow, BOOL fFrameWindow);
-		STDMETHOD(TranslateAccelerator)(LPMSG lpMsg, const GUID* pguidCmdGroup, DWORD nCmdID);	//ä¯ÀÀÆ÷ÏûÏ¢¹ýÂË
+		STDMETHOD(TranslateAccelerator)(LPMSG lpMsg, const GUID* pguidCmdGroup, DWORD nCmdID);	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
 		STDMETHOD(GetOptionKeyPath)(LPOLESTR* pchKey, DWORD dwReserved);
 		STDMETHOD(GetDropTarget)(IDropTarget* pDropTarget, IDropTarget** ppDropTarget);
 		STDMETHOD(GetExternal)(IDispatch** ppDispatch);
@@ -167,7 +167,7 @@ namespace DuiLib
             /* [out] */ __RPC__deref_out_opt IEnumString **ppenumString,
             /* [in] */ DWORD dwFlags) {return S_OK;}
 		// ITranslateAccelerator
-		// DuilibÏûÏ¢·Ö·¢¸øWebBrowser
+		// Duilibï¿½ï¿½Ï¢ï¿½Ö·ï¿½ï¿½ï¿½WebBrowser
 		virtual LRESULT TranslateAccelerator( MSG *pMsg );
 	};
 } // namespace DuiLib

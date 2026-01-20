@@ -1,4 +1,4 @@
-// MainWnd.cpp
+ï»¿// MainWnd.cpp
 
 #include "StdAfx.h"
 #include "MainWnd.h"
@@ -28,7 +28,7 @@ LPCTSTR CMainWnd::GetWindowClassName() const
 {
 	try
 	{
-		return _T("ÊÓÆµ¹ã¸æ¹ýÂË´óÊ¦°²×°Ïòµ¼");
+		return _T("ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Ë´ï¿½Ê¦ï¿½ï¿½×°ï¿½ï¿½");
 	}
 	catch (...)
 	{
@@ -98,7 +98,7 @@ LRESULT CMainWnd::OnTimer(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandle
 	{
 		int nVal = m_pProgressBar->GetValue();
 		CDuiString strPercent;
-		strPercent.Format(_T("ÕýÔÚ°²×°£¨%d%%£©"), nVal);
+		strPercent.Format(_T("ï¿½ï¿½ï¿½Ú°ï¿½×°ï¿½ï¿½%d%%ï¿½ï¿½"), nVal);
 		m_pInstallText->SetText( strPercent );
 		if (nVal > 95)
 		{
@@ -128,13 +128,13 @@ void CMainWnd::Init()
 void CMainWnd::InstallStart()
 {
 	m_pStepTabLayout->SelectItem(1);
-	//m_pInstallText->SetText(_T("ÕýÔÚ°²×°ÖÐ£¬ÇëÉÔºò..."));
+	//m_pInstallText->SetText(_T("ï¿½ï¿½ï¿½Ú°ï¿½×°ï¿½Ð£ï¿½ï¿½ï¿½ï¿½Ôºï¿½..."));
 
 	SetTimer(GetHWND(), TIMER_ID_PROGRESS, 100, NULL);
 }
 
 void CMainWnd::InstallFinished()
 {
-	m_pInstallText->SetText(_T("°²×°Íê³É£¡"));
+	m_pInstallText->SetText(_T("ï¿½ï¿½×°ï¿½ï¿½É£ï¿½"));
 	KillTimer(GetHWND(), TIMER_ID_PROGRESS);
 }

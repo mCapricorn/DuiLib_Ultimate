@@ -1,24 +1,24 @@
-#pragma once
+ï»¿#pragma once
 #include "Interface\IUIEffect.h"
 
 class IEffect;
 struct InternalAnimationParam
 {
-	AnimationParam  param;				// ½Ó¿Ú¶¨ÒåµÄ¶¯»­²ÎÊý
-	BYTE*			bmpDataCopy;		// Íâ²¿¶¯»­Í¼Æ¬×ÊÔ´±¸·Ý
-	DWORD			frameNow;			// µ±Ç°ÔËÐÐÖ¡
-	BOOL			bLastFrame;			// ÊÇ·ñÊÇ×îºóÒ»Ö¡
-	IEffect*		pEffect;			// Ö¸ÏòÌØÐ§º¯Êý½Ó¿ÚÖ¸Õë
+	AnimationParam  param;				// ï¿½Ó¿Ú¶ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	BYTE*			bmpDataCopy;		// ï¿½â²¿ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
+	DWORD			frameNow;			// ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ö¡
+	BOOL			bLastFrame;			// ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡
+	IEffect*		pEffect;			// Ö¸ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½Ö¸ï¿½ï¿½
 };
 
-//ÌØÐ§½Ó¿Ú
+//ï¿½ï¿½Ð§ï¿½Ó¿ï¿½
 class IEffect
 {
 public:
-	// ¼ÆËãÒ»Ö¡
+	// ï¿½ï¿½ï¿½ï¿½Ò»Ö¡
 	virtual void ComputeOneFrame(InternalAnimationParam *internalParam) = 0;
-	// ³õÊ¼»¯ÌØÐ§²ÎÊý
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
 	virtual void InitEffectParam(InternalAnimationParam *internalParam) = 0;
-	// ÇåÀíÌØÐ§²ÎÊý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
 	virtual void ReleaseEffectParam() = 0;
 };

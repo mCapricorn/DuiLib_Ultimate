@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "UIWebBrowser.h"
 #include <atlconv.h>
 #include <atlcomcli.h>
@@ -384,7 +384,7 @@ namespace DuiLib
 		if( m_pWebBrowser2 == NULL )
 			return E_NOTIMPL;
 
-		// µ±Ç°Web´°¿Ú²»ÊÇ½¹µã,²»´¦Àí¼ÓËÙ¼ü
+		// ï¿½ï¿½Ç°Webï¿½ï¿½ï¿½Ú²ï¿½ï¿½Ç½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¼ï¿½
 		BOOL bIsChild = FALSE;
 		HWND hTempWnd = NULL;
 		HWND hWndFocus = ::GetFocus();
@@ -426,7 +426,7 @@ namespace DuiLib
 		{
 			return m_pWebBrowserEventHandler->GetDropTarget(this, pDropTarget,ppDropTarget);
 		}
-		return S_FALSE;	// Ê¹ÓÃÏµÍ³ÍÏ×§
+		return S_FALSE;	// Ê¹ï¿½ï¿½ÏµÍ³ï¿½ï¿½×§
 	}
 
 	STDMETHODIMP CWebBrowserUI::GetExternal( IDispatch** ppDispatch )

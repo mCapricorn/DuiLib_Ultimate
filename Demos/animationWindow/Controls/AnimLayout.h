@@ -1,4 +1,4 @@
-#ifndef UI_ANIM_BOX_H_
+ï»¿#ifndef UI_ANIM_BOX_H_
 #define UI_ANIM_BOX_H_
 #pragma once
 
@@ -20,16 +20,16 @@ public:
 	void OnTimer(int iCurFrame);
 
 public:
-	// Ã¿Ò» ¸ö ¶¯»­¿ªÊ¼Ê±»Øµ÷
+	// Ã¿Ò» ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Ê±ï¿½Øµï¿½
 	virtual void OnUiEffectBegin(WPARAM effectKey, DWORD animaType) override;
-	// Ã¿Ò» ¸ö ¶¯»­½áÊøÊ±»Øµ÷
+	// Ã¿Ò» ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Øµï¿½
 	virtual void OnUiEffectEnd(WPARAM effectKey, DWORD animaType) override;
-	// Ã¿Ò» Ö¡ ¶¯»­»æÖÆÊ±»Øµ÷
+	// Ã¿Ò» Ö¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Øµï¿½
 	virtual void OnUiEffectDraw() override;
 
 private:
 
-	CDuiRect			m_rcCustomShadow;		//±£´æ´°Ìå·´×ªÇ°µÄÒõÓ°¾Å¹¬¸ñ
+	CDuiRect			m_rcCustomShadow;		//ï¿½ï¿½ï¿½æ´°ï¿½å·´×ªÇ°ï¿½ï¿½ï¿½ï¿½Ó°ï¿½Å¹ï¿½ï¿½ï¿½
 
 	bool				m_bPlaying;
 	HDC					m_hMemDc;

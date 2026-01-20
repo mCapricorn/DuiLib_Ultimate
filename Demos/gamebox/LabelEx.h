@@ -1,4 +1,4 @@
-#ifndef __LABELEX_H__
+﻿#ifndef __LABELEX_H__
 #define __LABELEX_H__
 
 namespace DuiLib

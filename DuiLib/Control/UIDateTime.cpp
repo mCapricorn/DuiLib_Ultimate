@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "UIDateTime.h"
 
 namespace DuiLib
@@ -46,11 +46,11 @@ namespace DuiLib
 			Create(m_pOwner->GetManager()->GetPaintWindow(), NULL, uStyle, 0, rcPos);
 			SetWindowFont(m_hWnd, m_pOwner->GetManager()->GetFontInfo(m_pOwner->GetFont())->hFont, TRUE);
 		}
-		// Ê¹ÓÃÏµÍ³µ±Ç°Ê±¼ä
+		// Ê¹ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ç°Ê±ï¿½ï¿½
 		if (m_pOwner->GetText().IsEmpty()) {
 			::GetLocalTime(&m_pOwner->m_sysTime);
 		}
-		// ÏÔÊ¾¸ñÊ½
+		// ï¿½ï¿½Ê¾ï¿½ï¿½Ê½
 		CDuiString sTimeFormat = m_pOwner->GetTimeFormat();
 		::SendMessage(m_hWnd, DTM_SETFORMAT, 0, LPARAM(sTimeFormat.GetData()));
 		memcpy(&m_oldSysTime, &m_pOwner->m_sysTime, sizeof(SYSTEMTIME));

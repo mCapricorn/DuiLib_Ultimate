@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Graph_Matrix.h"
 #include <math.h>
@@ -37,7 +37,7 @@ namespace Graph
 		}
 
 	public:
-		// Í¶Ó°Æ½ÃæÖÐÐÄÎªxyÖÐÐÄ£¨x,y·½Ïò¶¼¾ÓÖÐ£©
+		// Í¶Ó°Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªxyï¿½ï¿½ï¿½Ä£ï¿½x,yï¿½ï¿½ï¿½ò¶¼¾ï¿½ï¿½Ð£ï¿½
 		void InitProMatrix(CdRect &rcPlane, real nearPlane, real farPlane)
 		{
 			if (IsIdentity())
@@ -82,7 +82,7 @@ namespace Graph
 			m_matrix[2][3] = 1;
 		}
 
-		// Í¶Ó°Æ½ÃæÖÐÐÄ²»ÎªxyÖÐÐÄ£¨x,y·½Ïò¶¼²»¾ÓÖÐ£©
+		// Í¶Ó°Æ½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Îªxyï¿½ï¿½ï¿½Ä£ï¿½x,yï¿½ï¿½ï¿½ò¶¼²ï¿½ï¿½ï¿½ï¿½Ð£ï¿½
 		void InitProMatrixOffCenter(CdRect &rcPlane, real nearPlane, real farPlane)
 		{
 			if (IsIdentity())
@@ -102,12 +102,12 @@ namespace Graph
 
 		}
 
-		// Í¶Ó°vecµ½Æ½Æ¬nearPlane,
+		// Í¶Ó°vecï¿½ï¿½Æ½Æ¬nearPlane,
 		BOOL ProjectPoint(Vector &vec,real nearPlane = 0)
 		{
 			real innerRes = 0.0f;
 			MapVector(vec);
-			// Í¶Ó°¼ÆËã
+			// Í¶Ó°ï¿½ï¿½ï¿½ï¿½
 			//innerRes = (nearPlane - eye.m_vector[2])/(vec.m_vector[2]-eye.m_vector[2]);
 			//vec.m_vector[1] = -(innerRes*(vec.m_vector[1]-eye.m_vector[1]) + eye.m_vector[1]);
 			//vec.m_vector[0] = innerRes*(vec.m_vector[0]-eye.m_vector[0]) + eye.m_vector[0];
@@ -117,11 +117,11 @@ namespace Graph
 			vec.m_vector[0] = innerRes*vec.m_vector[0];
 		}
 
-		// rcSrc Í¶Ó°µ½wRc
-		// rcSrc ÓëwRc¾ùÊÇÊý¾ÝµÄÏÂ±ê·¶Î§¶ø²»ÊÇbouderRect
+		// rcSrc Í¶Ó°ï¿½ï¿½wRc
+		// rcSrc ï¿½ï¿½wRcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½Â±ê·¶Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bouderRect
 		BOOL ProjectRect(CdRect &rcSrc,WarpRect &wRc,CdPoint &ptCenter)
 		{
-			// ÒÆµ½xyÆ½ÃæÖÐÐÄ
+			// ï¿½Æµï¿½xyÆ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CdRect rc(rcSrc);
 		//	ptCenter.Offset(-rcSrc.left,-rcSrc.top);
 			CdSize offSet(ptCenter.x,ptCenter.y);
@@ -154,8 +154,8 @@ namespace Graph
 
 			return TRUE;
 		}
-		// ÓÃrcSrc¹¹ÔìÔ­µãcube,Í¨¹ýÐý×ªµÃµ½Í¶Ó°µÄÃæ,index ÎªÒª»ñµÃµÄÃæµÄÐòºÅ
-		// rcSrc ÓëwRc¾ùÊÇÊý¾ÝµÄÏÂ±ê·¶Î§¶ø²»ÊÇbouderRect
+		// ï¿½ï¿½rcSrcï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½cube,Í¨ï¿½ï¿½ï¿½ï¿½×ªï¿½Ãµï¿½Í¶Ó°ï¿½ï¿½ï¿½ï¿½,index ÎªÒªï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// rcSrc ï¿½ï¿½wRcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½Â±ê·¶Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bouderRect
 		// cube plane index  
 		// front 	0 
 		// right 	1 
@@ -167,7 +167,7 @@ namespace Graph
 		{
 			assert(rcSrc.TopLeft() == CdPoint(0,0));
 		
-			// ÒÆµ½xyÆ½ÃæÖÐÐÄ
+			// ï¿½Æµï¿½xyÆ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			real ptTemp1 = rcSrc.Width()/2;
 			real ptTemp2 = rcSrc.Height()/2;
 
@@ -252,8 +252,8 @@ namespace Graph
 			return TRUE;
 		}
 
-		// ÓÃrcSrc¹¹ÔìÔ­µãcube,Í¨¹ýÐý×ªµÃµ½Í¶Ó°µÄÃæ,index ÎªÒª»ñµÃµÄÃæµÄÐòºÅ
-		// rcSrc ÓëwRc¾ùÊÇÊý¾ÝµÄÏÂ±ê·¶Î§¶ø²»ÊÇbouderRect
+		// ï¿½ï¿½rcSrcï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½cube,Í¨ï¿½ï¿½ï¿½ï¿½×ªï¿½Ãµï¿½Í¶Ó°ï¿½ï¿½ï¿½ï¿½,index ÎªÒªï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// rcSrc ï¿½ï¿½wRcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½Â±ê·¶Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bouderRect
 		// cube plane index  
 		// front 	0 
 		// right 	1 
@@ -265,7 +265,7 @@ namespace Graph
 		{
 			assert(rcSrc.TopLeft() == CdPoint(0,0));
 
-			// ÒÆµ½xyÆ½ÃæÖÐÐÄ
+			// ï¿½Æµï¿½xyÆ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			real ptTemp1 = rcSrc.Width()/2;
 			real ptTemp2 = rcSrc.Height()/2;
 
@@ -350,8 +350,8 @@ namespace Graph
 			return TRUE;
 		}
 
-		// ÓÃrcSrc¹¹ÔìÔ­µãcube,Í¨¹ýÐý×ªµÃµ½Í¶Ó°µÄÃæ,index ÎªÒª»ñµÃµÄÃæµÄÐòºÅ
-		// rcSrc ÓëwRc¾ùÊÇÊý¾ÝµÄÏÂ±ê·¶Î§¶ø²»ÊÇbouderRect
+		// ï¿½ï¿½rcSrcï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½cube,Í¨ï¿½ï¿½ï¿½ï¿½×ªï¿½Ãµï¿½Í¶Ó°ï¿½ï¿½ï¿½ï¿½,index ÎªÒªï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// rcSrc ï¿½ï¿½wRcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½Â±ê·¶Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bouderRect
 		// prism plane index  
 		// front 		0 
 		// right_back 	1 
@@ -360,7 +360,7 @@ namespace Graph
 		{
 			assert(rcSrc.TopLeft() == CdPoint(0,0));
 
-			// ÒÆµ½xyÆ½ÃæÖÐÐÄ
+			// ï¿½Æµï¿½xyÆ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			real ptTemp1 = rcSrc.Width()/2;
 			real ptTemp2 = rcSrc.Height()/2;
 			real nearPlane = ptTemp1*tanf(M_PI/6);
@@ -420,8 +420,8 @@ namespace Graph
 			return TRUE;
 		}
 
-		// ÓÃrcSrc¹¹ÔìÔ­µãcube,Í¨¹ýÐý×ªµÃµ½Í¶Ó°µÄÃæ,index ÎªÒª»ñµÃµÄÃæµÄÐòºÅ
-		// rcSrc ÓëwRc¾ùÊÇÊý¾ÝµÄÏÂ±ê·¶Î§¶ø²»ÊÇbouderRect
+		// ï¿½ï¿½rcSrcï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½cube,Í¨ï¿½ï¿½ï¿½ï¿½×ªï¿½Ãµï¿½Í¶Ó°ï¿½ï¿½ï¿½ï¿½,index ÎªÒªï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// rcSrc ï¿½ï¿½wRcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½Â±ê·¶Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bouderRect
 		// prism plane index  
 		// front 		0 
 		// top_back 	1 
@@ -430,7 +430,7 @@ namespace Graph
 		{
 			assert(rcSrc.TopLeft() == CdPoint(0,0));
 
-			// ÒÆµ½xyÆ½ÃæÖÐÐÄ
+			// ï¿½Æµï¿½xyÆ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			real ptTemp1 = rcSrc.Width()/2;
 			real ptTemp2 = rcSrc.Height()/2;
 			real nearPlane = ptTemp2*tanf(M_PI/6);

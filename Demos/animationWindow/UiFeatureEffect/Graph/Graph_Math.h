@@ -1,35 +1,35 @@
-#pragma once
+ï»¿#pragma once
 
 #include <math.h>
 #include "Graph_Def.h"
 
 namespace Graph
 {
-	// ²ÎÊý¶¨Òå(ºê)
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½)
 	const real M_PI = 3.141592654f;
 	
-	// ÊýÖµ²Ù×÷(ºê)
+	// ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½)
 	#define ABS(x) ((x)>0?(x):-(x))
 	#define ToInt(value)	((int)(value))
 	#define ToLong(value)	((long)(value))	
 	#define SIGN(x) ((x)>0?(1):-(1))
 
-	// °Ñreal x ×ª»»³Éint y 
+	// ï¿½ï¿½real x ×ªï¿½ï¿½ï¿½ï¿½int y 
 	#define  REAL2INT(x,y)		__asm fld [x] __asm fistp y 
 
-	// °Ñint x ×ª»»³Éreal y 
+	// ï¿½ï¿½int x ×ªï¿½ï¿½ï¿½ï¿½real y 
 	#define  INT2REAL(x,y)		__asm fild [x] __asm fstp y 
 	
-	// ÊýÖµ±È½Ï(ºê)
+	// ï¿½ï¿½Öµï¿½È½ï¿½(ï¿½ï¿½)
 	#define max(a,b)    (((a) > (b)) ? (a) : (b))
 	#define min(a,b)    (((a) < (b)) ? (a) : (b))
 	#define between(a,b,c) (((a)<=(b)) && ((b)<(c)))
 	#define isnear(a,b,d)	(((b)-(d)<(a)) && ((a)<(b)+(d)))
 
-	// Êý×é²Ù×÷(ºê)
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½)
 	#define ARRAY_BOUND_OF(array)	(sizeof(array)/sizeof(array[0]))
 
-	// ÊýÖµ±È½Ï
+	// ï¿½ï¿½Öµï¿½È½ï¿½
 	inline bool D_Equal(real d1, real d2, real dPrec = dConst_MinPrecision)
 	{
 		return (ABS(d1-d2)<dPrec);
@@ -87,22 +87,22 @@ namespace Graph
 		return d;
 	}
 
-	//Ïò+¡ÞÉáÈë
+	//ï¿½ï¿½+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	inline real D_Ceil(real d)
 	{
 		return ceil(d);
 	}
-	//Ïò0ÉáÈë
+	//ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½
 	inline real D_Fix(real d)
 	{
 		return (d >= 0) ? floor(d) : ceil(d);
 	}
-	//Ïò-¡ÞÉáÈë
+	//ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	inline real D_Floor(real d)
 	{
 		return floor(d);
 	}
-	//ËÄÉáÎåÈë
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	inline real D_Round(real d)
 	{
 		real df = floor(d);
@@ -147,7 +147,7 @@ namespace Graph
 		b=temp;
 	}
 
-	// Point&Size½á¹¹
+	// Point&Sizeï¿½á¹¹
 	#pragma pack(push,1)
 	template<class T>
 	struct DPOINTT
@@ -171,13 +171,13 @@ namespace Graph
 	}
 
 
-	// CdPoint&CdSizeÉùÃ÷
+	// CdPoint&CdSizeï¿½ï¿½ï¿½ï¿½
 	template<class T>
 	class CdPointT;
 	template<class T>
 	class CdSizeT;
 
-	// CdPointÀà
+	// CdPointï¿½ï¿½
 	#pragma pack(push,1)
 	template<class T>
 	class CdPointT : public DPOINTT<T>
@@ -328,7 +328,7 @@ namespace Graph
 	};
 	#pragma pack(pop)
 
-	// CdSizeÀà
+	// CdSizeï¿½ï¿½
 	#pragma pack(push,1)
 	template<class T>
 	class CdSizeT : public DSIZET<T>
@@ -489,7 +489,7 @@ namespace Graph
 	typedef CdSizeFloat CdSize;
 #endif //USING_DOUBLEFLOAT
 	
-	// CdPoint&CdSizeÔËËã
+	// CdPoint&CdSizeï¿½ï¿½ï¿½ï¿½
 	#define OUGHT(f)           ((void)0)
 	inline void CdPoint::operator += (const CdSize& size)
 	{

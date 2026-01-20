@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 
 #include "..\Graph\Graph_Vector.h"
 using namespace Graph;
 
 namespace Motion
 {
-	// Ö±ÏßÔË¶¯
+	// Ö±ï¿½ï¿½ï¿½Ë¶ï¿½
 	class CMotion
 	{
 	public:
@@ -49,74 +49,74 @@ namespace Motion
 			return m_position;
 		}
 
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄÎ»ÖÃ
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 		virtual const Vector GetNowPosition(real tTime) = 0;
 	
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄËÙ¶È
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 		virtual const Vector GetNowVelocity(real tTime) = 0;
 
 
 	protected:
-		// ³õÊ¼ËÙ¶È¼ÓËÙ¶ÈºÍÎ»ÖÃ
+		// ï¿½ï¿½Ê¼ï¿½Ù¶È¼ï¿½ï¿½Ù¶Èºï¿½Î»ï¿½ï¿½
 		Vector m_velocity;
 		Vector m_acceleration;
 		Vector m_position;
 	};
 
-	// ÔÈËÙÖ±ÏßÔË¶¯
+	// ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½Ë¶ï¿½
 	class CUniformMotion : public CMotion
 	{
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄÎ»ÖÃ
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 		virtual const Vector GetNowPosition(real tTime)
 		{
 			return Vector(m_position+m_velocity*tTime);
 		}
 
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄËÙ¶È
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 		virtual const Vector GetNowVelocity(real tTime)
 		{
 			return m_velocity;
 		}
 	};
 
-	// ÔÈ¼ÓËÙÖ±ÏßÔË¶¯
+	// ï¿½È¼ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½Ë¶ï¿½
 	class CUniformAccelerationMotion : public CMotion
 	{
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄÎ»ÖÃ
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 		virtual const Vector GetNowPosition(real tTime)
 		{
 			return Vector(m_position + m_velocity*tTime + m_acceleration*tTime*tTime*0.5f);
 		}
 
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄËÙ¶È
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 		virtual const Vector GetNowVelocity(real tTime)
 		{
 			return Vector(m_velocity + m_acceleration*tTime);
 		}
 	};
 
-	// ±ä¼ÓËÙÖ±ÏßÔË¶¯
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½Ë¶ï¿½
 	class CVaryAccelerationMotion : public CMotion
 	{
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄÎ»ÖÃ
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 		virtual const Vector GetNowPosition(real tTime)
 		{
 			// acceleration Îª -velocity
 			return Vector(m_position + m_velocity*tTime*tTime*0.5f*(1-tTime/3));
 		}
 
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄËÙ¶È
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 		virtual const Vector GetNowVelocity(real tTime)
 		{
 			return Vector(m_velocity*(1-tTime*tTime));
 		}
 	};
 	
-	//×èÄáÕñ¶¯
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	class CDamp
 	{
 	public:
-		// »ñµÃtTime Ê±¿ÌÎïÌåµÄÕñ·ù
+		// ï¿½ï¿½ï¿½tTime Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		virtual real GetNowAmplitude(real tTime) = 0;
 
 	public:
@@ -178,15 +178,15 @@ namespace Motion
 		}
 
 	protected:
-		real m_amplitude;			//Õñ·ù
-		real m_damp;				//×èÄáÒò×Ó
-		real m_angularFrequency;	//¹ÌÓÐ½ÇÆµÂÊ
-		real m_phase;				//³õÊ¼ÏàÎ»
+		real m_amplitude;			//ï¿½ï¿½ï¿½
+		real m_damp;				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		real m_angularFrequency;	//ï¿½ï¿½ï¿½Ð½ï¿½Æµï¿½ï¿½
+		real m_phase;				//ï¿½ï¿½Ê¼ï¿½ï¿½Î»
 	};
 
-	// Ç·×èÄáÔË¶¯(¦Â<¦Ø)
-	//x(t) = A * exp(-¦Â*t) * cos(sqrt(¦Ø^2 - ¦Â^2) * t + ¦Õ) , ¦ÂÊÇ×èÄáÒò×Ó£¬¦ØÊÇ¹ÌÓÐ½ÇÆµÂÊ£¬AÊÇÕñ·ù£¬¦Õ³õÊ¼ÏàÎ»£¨Îª·½±ã¼ÆËã¿ÉÒÔµÈÓÚ0£©
-	//Õñ·ùËæÊ±¼äµÄÍÆÒÆ£¬³ÊÖ¸ÊýµÝ¼õ£¬ ¦ÂÔ½´ó£¬Õñ¶¯Ë¥¼õÔ½¿ì£»·´Ö®£¬Õñ·ùË¥¼õÔ½Âý
+	// Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½(ï¿½ï¿½<ï¿½ï¿½)
+	//x(t) = A * exp(-ï¿½ï¿½*t) * cos(sqrt(ï¿½ï¿½^2 - ï¿½ï¿½^2) * t + ï¿½ï¿½) , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½Ð½ï¿½Æµï¿½Ê£ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ³ï¿½Ê¼ï¿½ï¿½Î»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½0ï¿½ï¿½
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ý¼ï¿½ï¿½ï¿½ ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½Ë¥ï¿½ï¿½Ô½ï¿½ì£»ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½Ë¥ï¿½ï¿½Ô½ï¿½ï¿½
 	class CUnderDamp : public CDamp
 	{
 	public:
@@ -206,9 +206,9 @@ namespace Motion
 	
 	};
 
-	// ¹ý×èÄáÔË¶¯(¦Â>¦Ø)
-	//x(t) = A * exp(-t*(¦Â-sqrt(¦Â^2-¦Ø^2)) + B * exp(-t*(¦Â+sqrt(¦Â^2-¦Ø^2)) ,
-	//ËæÊ±¼äµÄÍÆÒÆ£¬ÖÊµã×ø±êµ¥µ÷µØÇ÷ÓÚÁã¡£ÖÊµãÔË¶¯ÊÇ·ÇÖÜÆÚµÄ²»Íù¸´µÄ¡£½«ÖÊµãÒÆ¿ªÆ½ºâÎ»ÖÃºóÊÍ·Å£¬ÖÊµã±ãÂýÂý»Øµ½Æ½ºâÎ»ÖÃÍ£ÏÂÀ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½(ï¿½ï¿½>ï¿½ï¿½)
+	//x(t) = A * exp(-t*(ï¿½ï¿½-sqrt(ï¿½ï¿½^2-ï¿½ï¿½^2)) + B * exp(-t*(ï¿½ï¿½+sqrt(ï¿½ï¿½^2-ï¿½ï¿½^2)) ,
+	//ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½êµ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã¡£ï¿½Êµï¿½ï¿½Ë¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ÚµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Æ¿ï¿½Æ½ï¿½ï¿½Î»ï¿½Ãºï¿½ï¿½Í·Å£ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½Æ½ï¿½ï¿½Î»ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
 	class COverDamp : public CDamp
 	{
 	public:
@@ -247,13 +247,13 @@ namespace Motion
 		}
 
 	protected:
-		real m_amplitudeA,m_amplitudeB; //³õÊ¼Á½¸öÕñ·ù£¨³õÊ¼Ìõ¼þ£º¿ªÊ¼£¬½áÊø£©
+		real m_amplitudeA,m_amplitudeB; //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	};
 	
-	// ÁÙ½ç×èÄáÔË¶¯(¦Â=¦Ø)
-	//x(t) = (A + B*t) * exp(-¦Â*t)
-	//ÓÉÓÚ×èÁ¦½ÏÇ°ÕßÐ¡£¬ÖÊµãÒÆ¿ªÆ½ºâÎ»ÖÃÊÍ·Åºó£¬ÖÊµãºÜ¿ì»Øµ½Æ½ºâÎ»ÖÃ²¢Í£ÏÂÀ´
+	// ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½(ï¿½ï¿½=ï¿½ï¿½)
+	//x(t) = (A + B*t) * exp(-ï¿½ï¿½*t)
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Êµï¿½ï¿½Æ¿ï¿½Æ½ï¿½ï¿½Î»ï¿½ï¿½ï¿½Í·Åºï¿½ï¿½Êµï¿½Ü¿ï¿½Øµï¿½Æ½ï¿½ï¿½Î»ï¿½Ã²ï¿½Í£ï¿½ï¿½ï¿½ï¿½
 	class CCriticalDamp : public CDamp
 	{
 	public:
@@ -292,7 +292,7 @@ namespace Motion
 		}
 
 	protected:
-		real m_amplitudeA,m_amplitudeB; //³õÊ¼Á½¸öÕñ·ù£¨³õÊ¼Ìõ¼þ£º¿ªÊ¼£¬½áÊø£©
+		real m_amplitudeA,m_amplitudeB; //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	};
 

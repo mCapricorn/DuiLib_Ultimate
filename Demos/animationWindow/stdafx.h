@@ -1,19 +1,19 @@
-#pragma once
+О╩©#pragma once
 
 #include "targetver.h"
 
-#define WIN32_LEAN_AND_MEAN             //  ╢с Windows м╥нд╪ЧжпееЁЩ╪╚иый╧сц╣дпео╒
-// Windows м╥нд╪Ч:
+#define WIN32_LEAN_AND_MEAN             //  О©╫О©╫ Windows м╥О©╫д╪О©╫О©╫О©╫О©╫еЁО©╫О©╫О©╫О©╫О©╫й╧О©╫ц╣О©╫О©╫О©╫о╒
+// Windows м╥О©╫д╪О©╫:
 #include <windows.h>
 
-// C ткппй╠м╥нд╪Ч
+// C О©╫О©╫О©╫О©╫й╠м╥О©╫д╪О©╫
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
 
 
-// TODO: тз╢к╢╕рЩсцЁлпРпХр╙╣дфДкШм╥нд╪Ч
+// TODO: О©╫з╢к╢О©╫О©╫О©╫О©╫цЁО©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫м╥О©╫д╪О©╫
 #include "..\..\DuiLib\UIlib.h"
 using namespace DuiLib;
 

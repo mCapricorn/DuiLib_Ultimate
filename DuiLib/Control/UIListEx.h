@@ -1,4 +1,4 @@
-#ifndef __UILISTEX_H__
+ï»¿#ifndef __UILISTEX_H__
 #define __UILISTEX_H__
 
 #pragma once
@@ -134,13 +134,13 @@ namespace DuiLib {
 		CDuiString m_sSepImage;
 		CDuiString m_sSepImageModify;
 
-		//Ö§³Ö±à¼­
+		//Ö§ï¿½Ö±à¼­
 		BOOL m_bEditable;
 
-		//Ö§³Ö×éºÏ¿ò
+		//Ö§ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
 		BOOL m_bComboable;
 
-		//Ö§³Ö¸´Ñ¡¿ò
+		//Ö§ï¿½Ö¸ï¿½Ñ¡ï¿½ï¿½
 		BOOL m_bCheckBoxable;
 
 	public:
@@ -192,10 +192,10 @@ namespace DuiLib {
 
 		void GetCheckBoxRect(RECT &rc);	
 
-		int GetCheckBoxWidth() const;       // Êµ¼Ê´óÐ¡Î»ÖÃÊ¹ÓÃGetPos»ñÈ¡£¬ÕâÀïµÃµ½µÄÊÇÔ¤ÉèµÄ²Î¿¼Öµ
-		void SetCheckBoxWidth(int cx);      // Ô¤ÉèµÄ²Î¿¼Öµ
-		int GetCheckBoxHeight() const;      // Êµ¼Ê´óÐ¡Î»ÖÃÊ¹ÓÃGetPos»ñÈ¡£¬ÕâÀïµÃµ½µÄÊÇÔ¤ÉèµÄ²Î¿¼Öµ
-		void SetCheckBoxHeight(int cy);     // Ô¤ÉèµÄ²Î¿¼Öµ
+		int GetCheckBoxWidth() const;       // Êµï¿½Ê´ï¿½Ð¡Î»ï¿½ï¿½Ê¹ï¿½ï¿½GetPosï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
+		void SetCheckBoxWidth(int cx);      // Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
+		int GetCheckBoxHeight() const;      // Êµï¿½Ê´ï¿½Ð¡Î»ï¿½ï¿½Ê¹ï¿½ï¿½GetPosï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
+		void SetCheckBoxHeight(int cy);     // Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
 
 
 	public:
@@ -278,10 +278,10 @@ namespace DuiLib {
 		void GetCheckBoxRect(int nIndex, RECT &rc);	
 		void GetColumRect(int nColum, RECT &rc);
 
-		int GetCheckBoxWidth() const;       // Êµ¼Ê´óÐ¡Î»ÖÃÊ¹ÓÃGetPos»ñÈ¡£¬ÕâÀïµÃµ½µÄÊÇÔ¤ÉèµÄ²Î¿¼Öµ
-		void SetCheckBoxWidth(int cx);      // Ô¤ÉèµÄ²Î¿¼Öµ
-		int GetCheckBoxHeight() const;      // Êµ¼Ê´óÐ¡Î»ÖÃÊ¹ÓÃGetPos»ñÈ¡£¬ÕâÀïµÃµ½µÄÊÇÔ¤ÉèµÄ²Î¿¼Öµ
-		void SetCheckBoxHeight(int cy);     // Ô¤ÉèµÄ²Î¿¼Öµ
+		int GetCheckBoxWidth() const;       // Êµï¿½Ê´ï¿½Ð¡Î»ï¿½ï¿½Ê¹ï¿½ï¿½GetPosï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
+		void SetCheckBoxWidth(int cx);      // Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
+		int GetCheckBoxHeight() const;      // Êµï¿½Ê´ï¿½Ð¡Î»ï¿½ï¿½Ê¹ï¿½ï¿½GetPosï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
+		void SetCheckBoxHeight(int cy);     // Ô¤ï¿½ï¿½Ä²Î¿ï¿½Öµ
 
 		void SetCheck(BOOL bCheck);
 		BOOL GetCheck() const;

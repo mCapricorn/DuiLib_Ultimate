@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 
 #ifdef _DEBUG
 #include <shlwapi.h>
@@ -193,7 +193,7 @@ LDispatch:
 
 void CNotifyPump::NotifyPump(TNotifyUI& msg)
 {
-	///±éÀúÐéÄâ´°¿Ú
+	///ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â´°ï¿½ï¿½
 	if( !msg.sVirtualWnd.IsEmpty() ){
 		for( int i = 0; i< m_VirtualWndMap.GetSize(); i++ ) {
 			if( LPCTSTR key = m_VirtualWndMap.GetAt(i) ) {
@@ -207,7 +207,7 @@ void CNotifyPump::NotifyPump(TNotifyUI& msg)
 	}
 
 	///
-	//±éÀúÖ÷´°¿Ú
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LoopDispatch( msg );
 }
 
@@ -371,7 +371,7 @@ void CWindowWnd::CenterWindow()
 	if (hWndCenter!=NULL)
 		hWnd=hWndCenter;
 
-	// ´¦Àí¶àÏÔÊ¾Æ÷Ä£Ê½ÏÂÆÁÄ»¾ÓÖÐ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½
 	MONITORINFO oMonitor = {};
 	oMonitor.cbSize = sizeof(oMonitor);
 	::GetMonitorInfo(::MonitorFromWindow(hWnd, MONITOR_DEFAULTTONEAREST), &oMonitor);
@@ -400,13 +400,13 @@ void CWindowWnd::CenterWindow()
 void CWindowWnd::SetIcon(UINT nRes)
 {
 	HICON hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON,
-		(::GetSystemMetrics(SM_CXICON) + 15) & ~15, (::GetSystemMetrics(SM_CYICON) + 15) & ~15,	// ·ÀÖ¹¸ßDPIÏÂÍ¼±êÄ£ºý
+		(::GetSystemMetrics(SM_CXICON) + 15) & ~15, (::GetSystemMetrics(SM_CYICON) + 15) & ~15,	// ï¿½ï¿½Ö¹ï¿½ï¿½DPIï¿½ï¿½Í¼ï¿½ï¿½Ä£ï¿½ï¿½
 		LR_DEFAULTCOLOR);
 	ASSERT(hIcon);
 	::SendMessage(m_hWnd, WM_SETICON, (WPARAM) TRUE, (LPARAM) hIcon);
 
 	hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON,
-		(::GetSystemMetrics(SM_CXICON) + 15) & ~15, (::GetSystemMetrics(SM_CYICON) + 15) & ~15,	// ·ÀÖ¹¸ßDPIÏÂÍ¼±êÄ£ºý
+		(::GetSystemMetrics(SM_CXICON) + 15) & ~15, (::GetSystemMetrics(SM_CYICON) + 15) & ~15,	// ï¿½ï¿½Ö¹ï¿½ï¿½DPIï¿½ï¿½Í¼ï¿½ï¿½Ä£ï¿½ï¿½
 		LR_DEFAULTCOLOR);
 	ASSERT(hIcon);
 	::SendMessage(m_hWnd, WM_SETICON, (WPARAM) FALSE, (LPARAM) hIcon);

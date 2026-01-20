@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 class CGameItemUI : public DuiLib::COptionUI
 {
 public:

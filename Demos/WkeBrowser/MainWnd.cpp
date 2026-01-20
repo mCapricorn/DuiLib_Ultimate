@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "MainWnd.h"
 #include <algorithm>
 #include <ShellAPI.h>
@@ -69,7 +69,7 @@ void CMainWnd::InitWindow()
 	m_pBrowserTabBody = static_cast<CTabLayoutUI*>(m_pm.FindControl(_T("browser_tabbody")));
 
 	CWkeWebkitUI::InitializeWebkit();
-	// ´´½¨ÆðÊ¼Ò³
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Ò³
 	CreateNewTabAndGo(sHomePage);
 }
 
@@ -208,7 +208,7 @@ void CMainWnd::OnReturn( TNotifyUI &msg )
 
 LRESULT CMainWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
  {
-	 // ¹Ø±Õ´°¿Ú£¬ÍË³ö³ÌÐò
+	 // ï¿½Ø±Õ´ï¿½ï¿½Ú£ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½
 	 if(uMsg == WM_DESTROY)
 	 {
 		 CWkeWebkitUI::UninitializeWebkit();
@@ -228,7 +228,7 @@ LRESULT CMainWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, B
 
 LRESULT CMainWnd::OnSysCommand( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 {
-	// ÓÐÊ±»áÔÚÊÕµ½WM_NCDESTROYºóÊÕµ½wParamÎªSC_CLOSEµÄWM_SYSCOMMAND
+	// ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½WM_NCDESTROYï¿½ï¿½ï¿½Õµï¿½wParamÎªSC_CLOSEï¿½ï¿½WM_SYSCOMMAND
 	if( wParam == SC_CLOSE ) {
 		::PostQuitMessage(0L);
 		bHandled = TRUE;
@@ -270,8 +270,8 @@ int CMainWnd::CreateNewTab(int nIndex, LPCTSTR pstrUrl)
 
 	if(pstrUrl == NULL) {
 		lstrcpy(pInfo->szUrl, _T("about:blank"));
-		lstrcpy(pInfo->szTitle, _T("¿Õ°×Ò³"));
-		pTab->SetText(_T("¿Õ°×Ò³"));
+		lstrcpy(pInfo->szTitle, _T("ï¿½Õ°ï¿½Ò³"));
+		pTab->SetText(_T("ï¿½Õ°ï¿½Ò³"));
 	}
 	else {
 		lstrcpy(pInfo->szUrl, pstrUrl);

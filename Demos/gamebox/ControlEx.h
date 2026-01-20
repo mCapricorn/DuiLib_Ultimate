@@ -1,4 +1,4 @@
-#ifndef __CONTROLEX_H__
+ï»¿#ifndef __CONTROLEX_H__
 #define __CONTROLEX_H__
 
 #include <vector>
@@ -311,8 +311,8 @@ public:
 		if( node->data()._level >= 3 ) return CDuiSize();
 
 		SIZE szExpander = {0};
-		szExpander.cx = 6 + 24 * node->data()._level - 4/*ÊÊµ±·Å´óÒ»µã*/;
-		szExpander.cy = szExpander.cx + 16 + 8/*ÊÊµ±·Å´óÒ»µã*/;
+		szExpander.cx = 6 + 24 * node->data()._level - 4/*ï¿½Êµï¿½ï¿½Å´ï¿½Ò»ï¿½ï¿½*/;
+		szExpander.cy = szExpander.cx + 16 + 8/*ï¿½Êµï¿½ï¿½Å´ï¿½Ò»ï¿½ï¿½*/;
 		return szExpander;
 	}
 

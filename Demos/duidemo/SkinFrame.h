@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "SkinManager.h"
 
@@ -34,7 +34,7 @@ public:
 	void Notify(TNotifyUI& msg)
 	{
 		if( msg.sType == _T("click") ) {
-			// °´Å¥ÏûÏ¢
+			// ï¿½ï¿½Å¥ï¿½ï¿½Ï¢
 			OnLClick(msg.pSender);
 		}
 	}
@@ -71,7 +71,7 @@ public:
 
 	LRESULT OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 	{
-		// ICONS Í¼±ê¼ÓÔØ
+		// ICONS Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		SetIcon(IDR_MAINFRAME);
 
 		LONG styleValue = ::GetWindowLong(*this, GWL_STYLE);

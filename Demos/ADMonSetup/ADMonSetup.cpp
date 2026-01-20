@@ -1,4 +1,4 @@
-// ADMonSetup.cpp : Defines the entry point for the application.
+ï»¿// ADMonSetup.cpp : Defines the entry point for the application.
 //
 
 #include "StdAfx.h"
@@ -11,8 +11,8 @@
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
-//³ÌÐòÈë¿Ú´¦µ÷ÓÃ¸Ãº¯Êý½øÐÐÄÚ´æÐ¹Â¶¼ì²â
-//³ÌÐòÍË³öÇ°µ÷ÓÃ_CrtDumpMemoryLeaks();º¯Êý¿É²é¿´ÄÚ´æÐ¹Â¶µÄIDºÅ£¬¸ÃIDºÅ¿É×÷ÎªBreakpointµÄ²ÎÊý£¬ÔËÐÐÊ±½«»áÔÚÏàÓ¦Î»ÖÃ×Ô¶¯¶Ïµã
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ã¸Ãºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ð¹Â¶ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½Ç°ï¿½ï¿½ï¿½ï¿½_CrtDumpMemoryLeaks();ï¿½ï¿½ï¿½ï¿½ï¿½É²é¿´ï¿½Ú´ï¿½Ð¹Â¶ï¿½ï¿½IDï¿½Å£ï¿½ï¿½ï¿½IDï¿½Å¿ï¿½ï¿½ï¿½ÎªBreakpointï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦Î»ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ïµï¿½
 inline  void  EnableMemLeakCheck(int Breakpoint = 0){
 	_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG)  |  _CRTDBG_LEAK_CHECK_DF);
 	if(Breakpoint)
@@ -28,18 +28,18 @@ inline  void  EnableMemLeakCheck(int Breakpoint = 0){
 
 void InitResource()
 {	
-	// ×ÊÔ´ÀàÐÍ
+	// ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
 	CPaintManagerUI::SetResourceType(UILIB_FILE);
-	// ×ÊÔ´Â·¾¶
+	// ï¿½ï¿½Ô´Â·ï¿½ï¿½
 	CDuiString strResourcePath = CPaintManagerUI::GetInstancePath();
-	// ¼ÓÔØ×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 	switch(CPaintManagerUI::GetResourceType())
 	{
 	case UILIB_FILE:
 		{
 			strResourcePath += _T("skin\\ADMonSetup\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -47,7 +47,7 @@ void InitResource()
 		{
 			strResourcePath += _T("skin\\ADMonSetup\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("IDR_RES"), _T("xml"));
 			break;
 		}
@@ -56,7 +56,7 @@ void InitResource()
 			strResourcePath += _T("skin\\");
 			CPaintManagerUI::SetResourcePath(strResourcePath.GetData());
 			CPaintManagerUI::SetResourceZip(_T("ADMonSetup.zip"), true);
-			// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 			break;
 		}
@@ -73,7 +73,7 @@ void InitResource()
 					dwSize = ::SizeofResource(CPaintManagerUI::GetResourceDll(), hResource);
 					if( dwSize > 0 ) {
 						CPaintManagerUI::SetResourceZip((LPBYTE)::LockResource(hGlobal), dwSize);
-						// ¼ÓÔØ×ÊÔ´¹ÜÀíÆ÷
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						CResourceManager::GetInstance()->LoadResource(_T("res.xml"), NULL);
 					}
 				}
@@ -105,13 +105,13 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	InitResource();
 
 	if( ::LoadLibrary(_T("d3d9.dll")) == NULL ) 
-		::MessageBox(NULL, _T("¼ÓÔØ d3d9.dll Ê§°Ü£¬Ò»Ð©ÌØÐ§¿ÉÄÜÎÞ·¨ÏÔÊ¾£¡"), _T("ÐÅÏ¢ÌáÊ¾"),MB_OK|MB_ICONWARNING);
+		::MessageBox(NULL, _T("ï¿½ï¿½ï¿½ï¿½ d3d9.dll Ê§ï¿½Ü£ï¿½Ò»Ð©ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½"), _T("ï¿½ï¿½Ï¢ï¿½ï¿½Ê¾"),MB_OK|MB_ICONWARNING);
 
 	CMainWnd* pFrame = new CMainWnd();
 	if(pFrame == NULL)
 		return 0;
 
-	pFrame->Create(NULL,_T("ÊÓÆµ¹ã¸æ¹ýÂË´óÊ¦°²×°Ïòµ¼"), UI_WNDSTYLE_FRAME, 0L, 0, 0, 900, 600);
+	pFrame->Create(NULL,_T("ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Ë´ï¿½Ê¦ï¿½ï¿½×°ï¿½ï¿½"), UI_WNDSTYLE_FRAME, 0L, 0, 0, 900, 600);
 	pFrame->CenterWindow();
 	::ShowWindow(*pFrame, SW_SHOW);
 	CPaintManagerUI::MessageLoop();

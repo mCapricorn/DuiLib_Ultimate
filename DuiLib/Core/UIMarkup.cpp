@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 
 #ifndef TRACE
 #define TRACE
@@ -532,19 +532,19 @@ void CMarkup::_SkipWhitespace(LPTSTR& pstr) const
 
 void CMarkup::_SkipIdentifier(LPCTSTR& pstr) const
 {
-    // ÊôĞÔÖ»ÄÜÓÃÓ¢ÎÄ£¬ËùÒÔÕâÑù´¦ÀíÃ»ÓĞÎÊÌâ
+    // ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     while( *pstr != _T('\0') && (*pstr == _T('_') || *pstr == _T(':') || _istalnum(*pstr)) ) pstr = ::CharNext(pstr);
 }
 
 void CMarkup::_SkipIdentifier(LPTSTR& pstr) const
 {
-    // ÊôĞÔÖ»ÄÜÓÃÓ¢ÎÄ£¬ËùÒÔÕâÑù´¦ÀíÃ»ÓĞÎÊÌâ
+    // ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     while( *pstr != _T('\0') && (*pstr == _T('_') || *pstr == _T(':') || _istalnum(*pstr)) ) pstr = ::CharNext(pstr);
 }
 
 bool CMarkup::_ParseAttributes(LPTSTR& pstrText)
 {   
-	// ÎŞÊôĞÔ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LPTSTR pstrIdentifier = pstrText;
 	if( *pstrIdentifier == _T('/') && *++pstrIdentifier == _T('>') ) return true;
     if( *pstrText == _T('>') ) return true;

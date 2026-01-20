@@ -1,4 +1,4 @@
-#ifndef WIN_IMPL_BASE_HPP
+ï»¿#ifndef WIN_IMPL_BASE_HPP
 #define WIN_IMPL_BASE_HPP
 
 namespace DuiLib
@@ -14,9 +14,9 @@ namespace DuiLib
 	public:
 		WindowImplBase(){};
 		virtual ~WindowImplBase(){};
-		// Ö»ÐèÖ÷´°¿ÚÖØÐ´£¨³õÊ¼»¯×ÊÔ´Óë¶àÓïÑÔ½Ó¿Ú£©
+		// Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ó¿Ú£ï¿½
 		virtual void InitResource(){};
-		// Ã¿¸ö´°¿Ú¶¼¿ÉÒÔÖØÐ´
+		// Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
 		virtual void InitWindow(){};
 		virtual void OnFinalMessage( HWND hWnd );
 		virtual void Notify(TNotifyUI& msg);

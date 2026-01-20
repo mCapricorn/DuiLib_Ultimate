@@ -1,4 +1,4 @@
-
+ï»¿
 #ifndef IEFFECT_H
 #define IEFFECT_H
 
@@ -7,35 +7,35 @@
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ¶¯»­²ÎÊý
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 struct AnimationParam
 {
-	// ¶¯»­ID
+	// ï¿½ï¿½ï¿½ï¿½ID
 	WPARAM				effectKey;
-	// ¶¯»­Í¼Æ¬×ÊÔ´
+	// ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ô´
 	HBITMAP				hBitmap;
-	// ¶¯»­Í¼Æ¬DC
+	// ï¿½ï¿½ï¿½ï¿½Í¼Æ¬DC
 	HDC					hdc;
-	// ¶¯»­Í¼Æ¬³ß´ç
+	// ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ß´ï¿½
 	SIZE				bmpSize;
-	// ¶¯»­Í¼Æ¬ÄÚ´æµØÖ·
+	// ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½Ú´ï¿½ï¿½Ö·
 	BYTE*				pBmpData;
-	// ¶¯»­ÖÖÀà
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	DWORD				animationEffect;
-	// ¶¯»­Ö¡Ê±¼ä
+	// ï¿½ï¿½ï¿½ï¿½Ö¡Ê±ï¿½ï¿½
 	DWORD				animationFrequency;
-	// ¶¯»­Ë³Ðò
+	// ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½
 	BOOL				bShow;
 };
 
 class _declspec(novtable) IUIEffectCallBack
 {
 public:
-	// Ã¿Ò» ¸ö ¶¯»­¿ªÊ¼Ê±»Øµ÷
+	// Ã¿Ò» ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Ê±ï¿½Øµï¿½
 	virtual void OnUiEffectBegin(WPARAM effectKey, DWORD animaType) = 0;
-	// Ã¿Ò» ¸ö ¶¯»­½áÊøÊ±»Øµ÷
+	// Ã¿Ò» ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Øµï¿½
 	virtual void OnUiEffectEnd(WPARAM effectKey, DWORD animaType) = 0;
-	// Ã¿Ò» Ö¡ ¶¯»­»æÖÆÊ±»Øµ÷
+	// Ã¿Ò» Ö¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Øµï¿½
 	virtual void OnUiEffectDraw() = 0;
 };
 
@@ -43,24 +43,24 @@ public:
 class _declspec(novtable) IUIEffect
 {
 public:
-	// ¼ÓÈëÒ»¸ö¶¯»­
+	// ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	virtual BOOL AppendAnimation(AnimationParam &aParam) = 0;
-	// É¾³ýÒ»¸ö¶¯»­
+	// É¾ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	virtual BOOL DependAnimation(WPARAM effectKey) = 0;
-	// É¾³ýËùÓÐ¶¯»­
+	// É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
 	virtual BOOL ClearAllAnimation() = 0;
-	// Ö´ÐÐËùÓÐ¶¯»­£¬frameSpin²ÎÊýÎÞÓÃ
+	// Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½frameSpinï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	virtual BOOL Animation(IUIEffectCallBack *iDrawEffect,DWORD frameSpin) = 0;
 
 };
 
-// µ¼³öº¯Êý
-// »ñµÃ¶¯»­ÀàÊµÀý
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 IUIEffect* GetAnimation(void);
-// É¾³ýGetAnimationº¯Êý»ñµÃµÄ¶¯»­ÀàÊµÀý
+// É¾ï¿½ï¿½GetAnimationï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÃµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 BOOL ReleaseAnimation(IUIEffect* &pUIEffect);
-// »ñµÃËùÖ§³ÖµÄ¶¯»­ÀàÐÍ£¨\0Îª·Ö¸ô·û£©£¬¶¯»­Ãû³ÆÔÚ
-// ×Ö·û´®ÖÐµÄË³Ðò¾ÍÊÇ¶¯»­ÖÖÀàµÄÊäÈëÖµ£¨1...N£©
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ÖµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½\0Îªï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ë³ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½1...Nï¿½ï¿½
 DWORD GetSurportAnimationType(const char* &strType);
 
 typedef IUIEffect* (*GETANIMATION)();
@@ -72,16 +72,16 @@ typedef DWORD (*GETSURPORTANIMATIONTYPE)(const char* &);
 class _declspec(novtable) IImageProcess
 {
 public:
-	// alpha »ìºÏ
+	// alpha ï¿½ï¿½ï¿½
 	virtual BOOL AlphaBlend(BYTE *desData, int desStride, int desLeft, int desTop, int desWidth, int desHeight, BYTE *srcData, int srcStride, int srcLeft, int srcTop, int srcWidth, int srcHeight, BYTE sourceAlpha = 255, int interpolationMode = 0) = 0;
-	// Í¼Æ¬Ëõ·Å
+	// Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
 	virtual BOOL ImageScale(BYTE *DataDes, int desWidth, int desHeight, BYTE *DataSrc, int srcStride, int srcLeft, int srcTop, int srcWidth, int srcHeight, int interpolationMode = 0) = 0;
 };
 
-// µ¼³öº¯Êý
-// »ñµÃÍ¼ÏñÀàÊµÀý
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 IImageProcess* GetImageProcess(void);
-// É¾³ýGetImageProcessº¯Êý»ñµÃµÄÍ¼ÏñÀàÊµÀý
+// É¾ï¿½ï¿½GetImageProcessï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Í¼ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 BOOL ReleaseImageProcess(IImageProcess* &pProcess);
 
 typedef IImageProcess* (*GETIMAGEPORCESS)();

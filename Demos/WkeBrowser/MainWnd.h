@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 //////////////////////////////////////////////////////////////////////////
 ///
@@ -23,7 +23,7 @@ public:
 	~CMainWnd(void);
 
 public:
-	// ³õÊ¼»¯×ÊÔ´¹ÜÀíÆ÷
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	virtual void InitWindow();
 
 	virtual void OnFinalMessage( HWND );

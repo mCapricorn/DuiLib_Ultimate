@@ -1,4 +1,4 @@
-#ifndef __UIDATETIME_H__
+ï»¿#ifndef __UIDATETIME_H__
 #define __UIDATETIME_H__
 
 #pragma once
@@ -7,7 +7,7 @@ namespace DuiLib
 {
 	class CDateTimeWnd;
 
-	/// Ê±¼äÑ¡Ôñ¿Ø¼þ
+	/// Ê±ï¿½ï¿½Ñ¡ï¿½ï¿½Ø¼ï¿½
 	class UILIB_API CDateTimeUI : public CLabelUI
 	{
 		DECLARE_DUICONTROL(CDateTimeUI)

@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+ï»¿#include "StdAfx.h"
 #include "PopWnd.h"
 #include "MsgWnd.h"
 #include <ShellAPI.h>
@@ -45,7 +45,7 @@ void CPopWnd::OnClick( TNotifyUI &msg )
 		return; 
 	}
 	else if( msg.pSender == m_pMinBtn ) { 
-		//CMsgWnd::MessageBox(m_hWnd, NULL, _T("×Ó×Ó´°¿Ú"));
+		//CMsgWnd::MessageBox(m_hWnd, NULL, _T("ï¿½ï¿½ï¿½Ó´ï¿½ï¿½ï¿½"));
 		SendMessage(WM_SYSCOMMAND, SC_MINIMIZE, 0); return; }
 	else if( msg.pSender == m_pMaxBtn ) { 
 		SendMessage(WM_SYSCOMMAND, SC_MAXIMIZE, 0); return; }
@@ -85,7 +85,7 @@ void CPopWnd::Notify( TNotifyUI &msg )
 
 LRESULT CPopWnd::OnSysCommand( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 {
-	// ÓÐÊ±»áÔÚÊÕµ½WM_NCDESTROYºóÊÕµ½wParamÎªSC_CLOSEµÄWM_SYSCOMMAND
+	// ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½WM_NCDESTROYï¿½ï¿½ï¿½Õµï¿½wParamÎªSC_CLOSEï¿½ï¿½WM_SYSCOMMAND
 	if( wParam == SC_CLOSE ) {
 		::PostQuitMessage(0L);
 		bHandled = TRUE;

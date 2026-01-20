@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <atlstr.h>
 #include <MsHTML.h>
 #include <vector>

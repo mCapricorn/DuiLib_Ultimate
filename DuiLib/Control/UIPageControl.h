@@ -1,4 +1,4 @@
-#ifndef __UIPageControl_H
+ï»¿#ifndef __UIPageControl_H
 #define __UIPageControl_H
 
 #pragma once
@@ -13,32 +13,32 @@ namespace DuiLib
         //maxpage="20,6"
         void SetMaxPages(int nPages, int nShowNum = 6);
         void SetMaxChar(int nNum = 2);
-        //ÉèÖÃ×ÖÌå[font="1"]
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[font="1"]
         void SetFont(int nFont);
 
-        //ÉèÖÃÒ³ÂëÑ¡ÖÐµÄÑÕÉ«[pageselectedtextcolor]
+        //ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ñ¡ï¿½Ðµï¿½ï¿½ï¿½É«[pageselectedtextcolor]
         void SetPageSelectedTextColor(DWORD cr = 0xFF4EB857);
-        //ÉèÖÃÑ¡ÖÐµÄÒ³°´Å¥±³¾°É«[pageselectedbkcolor]
+        //ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½Ðµï¿½Ò³ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½É«[pageselectedbkcolor]
         void SetPageSelectedBkColor(DWORD cr = 0x00000000);
 
-        //ÉèÖÃÒ³ÂëÎÄ×ÖÑÕÉ«[pagetextcolor]
+        //ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«[pagetextcolor]
         void SetPageNormalTextColor(DWORD cr = 0xff000000);
-        //ÉèÖÃ°´Å¥±³¾°ÑÕÉ«[pagebkcolor]
+        //ï¿½ï¿½ï¿½Ã°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«[pagebkcolor]
         void SetPageBkColor(DWORD cr = 0x00000000);
 
-        //ÉèÖÃhot°´Å¥±³¾°É«[pagehotbkcolor]
+        //ï¿½ï¿½ï¿½ï¿½hotï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½É«[pagehotbkcolor]
         void SetPageHotBkColor(DWORD cr = 0x00000000);
-        //ÉèÖÃhot×ÖÌåÑÕÉ«[pagehottextcolor]
+        //ï¿½ï¿½ï¿½ï¿½hotï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«[pagehottextcolor]
         void SetPageHotTextColor(DWORD cr = 0x00000000);
 
 
-        //ÉèÖÃÒ³Âë°´Å¥µÄ´óÐ¡[pagesize="30,30"]
+        //ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ë°´Å¥ï¿½Ä´ï¿½Ð¡[pagesize="30,30"]
         void SetPageNoSize(int w = 30, int h = 30);
-        //ÉèÖÃgoto°´Å¥µÄ´óÐ¡[gotoeditsize="1,1"]
+        //ï¿½ï¿½ï¿½ï¿½gotoï¿½ï¿½Å¥ï¿½Ä´ï¿½Ð¡[gotoeditsize="1,1"]
         void SetGotoEditSize(int w = 30, int h = 26);
-        //ÉèÖÃGotoEdit±ß¿òÑÕÉ«[gotoeditbordercolor="0x00000000"]
+        //ï¿½ï¿½ï¿½ï¿½GotoEditï¿½ß¿ï¿½ï¿½ï¿½É«[gotoeditbordercolor="0x00000000"]
         void SetGotoEditBorderColor(DWORD cr = 0x00000000);
-        //ÉèÖÃGotoEdit±ß¿òµÄ´óÐ¡[gotoeditbordersize="1"]
+        //ï¿½ï¿½ï¿½ï¿½GotoEditï¿½ß¿ï¿½Ä´ï¿½Ð¡[gotoeditbordersize="1"]
         void SetGotoEditBorderSize(int size = 1);
 
     public:
@@ -87,7 +87,7 @@ namespace DuiLib
         CButtonUI* m_BtnGoto;
         CEditUI* m_EdtPageNo;
 
-        COptionUI* m_ConCurSel;    //µ±Ç°ÊÇµÚ¼¸Ò³
+        COptionUI* m_ConCurSel;    //ï¿½ï¿½Ç°ï¿½ÇµÚ¼ï¿½Ò³
     };
 }
 #endif //__UIPageControl_H

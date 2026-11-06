@@ -1,0 +1,2 @@
+[submodule "client/third_party/DuiLib_Ultimate"]
+	url = git@github.com:mCapricorn/DuiLib_Ultimate.git
